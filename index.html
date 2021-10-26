@@ -4,43 +4,56 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+   <link rel="stylesheet" href="styleNew.css" />
    <link rel="stylesheet" href="styles.css" />
    <title>S♥X GAME</title>
 </head>
 
 <body>
-   <div class="screen">
-      <h1 class="nameGame">S♥x game</h1>
-      <a href="#" class="start" id="start">Start</a>
-   </div>
 
    <div class="screen">
-      <h1>Select level</h1>
-      <ul class="type-list" id="type-list">
-         <li>
-            <button class="type-btn" data-type="easy">
-               easy
-            </button>
-         </li>
-         <li>
-            <button class="type-btn" data-type="norm">
-               norm
-            </button>
-         </li>
-         <li>
-            <button class="type-btn" data-type="hard">
-               hard
-            </button>
-         </li>
-      </ul>
-   </div>
+      <div id="main-content" class="main-content">
+         <div class='header'>
+            <h2 class="title-neon-blue">S♥x</h2>
+            <h1 class="title-neon-red">Game</h1>
+         </div>
+         <a href="#" class="active-btn start-btn" id="start">Start</a>
 
-   <div class="screen">
-      <button class="card-btn">Get card</button>
-      <div class="board" id="board">
-         <img class="card-img" id="card-img" src="#" alt="">
+         <div class="game-content select-lvl">
+            <h1 class="title-neon">Select level</h1>
+            <ul class="type-list" id="type-list">
+               <li>
+                  <button class="active-btn-levels" data-type="easy">
+                     easy
+                  </button>
+               </li>
+               <li>
+                  <button class="active-btn-levels" data-type="norm">
+                     norm
+                  </button>
+               </li>
+               <li>
+                  <button class="active-btn-levels" data-type="hard">
+                     hard
+                  </button>
+               </li>
+            </ul>
+         </div>
+
+         <div class="game-content game">
+            <button class="card-btn">Get card</button>
+            <div class="board" id="board">
+               <img class="card-img" id="card-img" src="#" alt="">
+            </div>
+            <button class="changeLevel-btn">Change level</button>
+         </div>
+
       </div>
-      <button class="changeLevel-btn">Change level</button>
+   </div>
+
+   <div class="screen">
+
    </div>
 
    <script src="app.js"></script>

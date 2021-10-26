@@ -9,11 +9,16 @@ let type = 'easy';
 
 btnStart.addEventListener('click', event => {
    event.preventDefault();
-   screens[0].classList.add('up');
+   window.document.getElementsByClassName('start-btn')[0].style.visibility = 'hidden';
+   window.document.getElementsByClassName('select-lvl')[0].style.visibility = 'unset';
+   //screens[0].classList.add('up');
 })
 
 typeList.addEventListener('click', event => {
-   if(event.target.classList.contains('type-btn')) {
+   if(event.target.classList.contains('active-btn-levels')) {
+      debugger
+      window.document.getElementsByClassName('select-lvl')[0].style.display = 'none';
+      window.document.getElementsByClassName('game')[0].style.display = 'unset';
       type = event.target.getAttribute('data-type');
       screens[1].classList.add('up');
    }
