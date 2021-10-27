@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
 
-* {
-   box-sizing: border-box;
-}
-
-body {
-   color: #fff;
-   font-family: 'Khula', sans-serif;
-   height: 100vh;
-   overflow: hidden;
-   margin: 0;
-   text-align: center;
-}
-
 a {
    color: #fff;
    text-decoration: none;
@@ -79,16 +66,7 @@ h1 {
    }
 }
 
-.type-list {
-   display: flex;
-   justify-content: center;
-   list-style: none;
-   padding: 0;
-}
 
-.type-list li {
-   margin: 10px;
-}
 
 .type-btn,
 .card-btn,
@@ -118,16 +96,6 @@ h1 {
 }
 
 .board {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   width: 20rem;
-   background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
-   box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
-   border-radius: 30px;
-   overflow: hidden;
-   margin: 1em;
 }
 
 img {
