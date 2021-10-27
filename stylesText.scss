@@ -219,11 +219,13 @@ body {
 
 .select-lvl {
   visibility: hidden;
+  margin-top: 80px;
 }
 .game {
   z-index: 1;
   display: none;
-  justify-content: space-around
+  justify-content: space-around;
+  margin-top: 80px;
 }
 
 .navigation-btn {
