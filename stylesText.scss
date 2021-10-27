@@ -1,0 +1,256 @@
+$r: #ff3300;
+$y: #ffc635;
+$t: transparent;
+$b: #00b4de;
+$w: #fff;
+
+@font-face {
+  font-family: "Draft Beer";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/lasenter.woff")
+  format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0px !important;
+}
+@mixin flicker($freq) {
+  animation: flicker $freq linear infinite;
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    61% {
+      opacity: 0.75;
+    }
+    62% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    76% {
+      opacity: 0.5;
+    }
+    78% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin stroke($width, $color) {
+  $shadow: ();
+  @for $i from -$width through $width {
+    $shadow: append($shadow, #{$width}px #{$i}px $color, comma);
+    $shadow: append($shadow, #{-$width}px #{$i}px $color, comma);
+    $shadow: append($shadow, #{$i}px #{$width}px $color, comma);
+    $shadow: append($shadow, #{$i}px #{-$width}px $color, comma);
+  }
+  text-shadow: $shadow;
+}
+
+.main-content {
+  display: flex;
+  background: black;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .header {
+    left: calc(50% - 200px);
+    top: calc(50% - 150px);
+  }
+  .title-neon-blue {
+    position: absolute;
+    color: $b;
+    left: 50%;
+    font-size: 30px;
+    top: 0.5rem;
+    font-family: "Varela Round";
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    filter: blur(1 px);
+    cursor: pointer;
+    @include flicker(0.25s);
+    &:before {
+      content: "SEX";
+      position: absolute;
+      left: 0;
+      top: 0;
+      filter: blur(20px);
+    }
+  }
+  .active-btn {
+    position: absolute;
+    border: thick double #32a1ce;
+    border-radius: 10px;
+    padding: 10px;
+    color: $b;
+    left: 50%;
+    font-size: 30px;
+    font-family: "Varela Round";
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    bottom: 2%;
+    letter-spacing: 10px;
+    filter: blur(1 px);
+    &:before {
+      content: "Start";
+      position: absolute;
+      left: 0;
+      top: 0;
+      filter: blur(20px);
+    }
+  }
+
+  .title-neon-red {
+    display: inline-block;
+    color: $r;
+    top: 0.5rem;
+    font-family: "Draft Beer";
+    font-size: 80px;
+    margin: 0.25em 0;
+    transform: rotate(-15deg) skew(-15deg);
+    position: relative;
+    cursor: pointer;
+    @include flicker(4s);
+    z-index: 5;
+    &:before,
+    &:after {
+      content: "Game";
+      position: absolute;
+      filter: blur(5px);
+      z-index: -1;
+      left: 0;
+      top: 0;
+    }
+    &:after {
+      @include stroke(20, $r);
+      filter: blur(25px);
+      opacity: 0.5;
+      color: $r;
+      z-index: 2;
+    }
+  }
+}
+
+.active-btn {
+  border: thick double #32a1ce;
+  border-radius: 10px;
+  padding: 10px;
+  color: $b;
+  left: 50%;
+  font-size: 30px;
+  font-family: "Varela Round";
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  bottom: 2%;
+  letter-spacing: 10px;
+  filter: blur(1 px);
+  &:before {
+    content: "Start";
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: blur(20px);
+  }
+}
+
+@font-face {
+  font-family: "Varela Round";
+  src: url("fonts/VarelaRound-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.game-content {
+  background: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .title-neon {
+    color: $b;
+    font-size: 1.5rem;
+    font-family: "Varela Round";
+    text-transform: uppercase;
+    top: 30px;
+    letter-spacing: 10px;
+    filter: blur(1 px);
+    @include flicker(0.25s);
+    cursor: pointer;
+  }
+  .active-btn-levels {
+    z-index: 1;
+    background-color: black;
+    border: thick double #32a1ce;
+    border-radius: 10px;
+    color: $b;
+    left: 50%;
+    font-size: 18px;
+    font-family: "Varela Round";
+    text-transform: uppercase;
+    bottom: 2%;
+    letter-spacing: 5px;
+    cursor: pointer;
+  }
+  .type-list {
+    z-index: 1;
+  }
+}
+
+.start-btn{
+  visibility: unset;
+  flex-wrap: inherit !important;
+}
+
+.select-lvl {
+  visibility: hidden;
+}
+.game {
+  z-index: 1;
+  display: none;
+}
+
+.navigation-btn {
+  flex-direction: row;
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  button {
+    width: 10rem;
+  }
+}
+
+.card-img {
+  max-width: 80%;
+  margin: 0px 0px 0px 0px;
+  border-radius: 30px;
+}
+
+.board {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.type-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
