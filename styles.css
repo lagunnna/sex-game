@@ -94,7 +94,7 @@ body {
 .main-content .title-neon-red {
   display: inline-block;
   color: #ff3300;
-  top: 0.5rem;
+  top: 20px;
   font-family: "Draft Beer";
   font-size: 80px;
   margin: 0.25em 0;
@@ -250,6 +250,7 @@ body {
 .game {
   z-index: 1;
   display: none;
+  justify-content: space-around;
 }
 
 .navigation-btn {
