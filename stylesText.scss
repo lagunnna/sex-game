@@ -65,7 +65,7 @@ body {
   align-items: center;
   flex-direction: column;
   .header {
-    height: 22vh;
+    height: 25vh;
     left: calc(50% - 200px);
     top: calc(50% - 150px);
   }
@@ -197,6 +197,8 @@ body {
   }
   .active-btn-levels {
     z-index: 1;
+    padding: 15px;
+    margin-bottom: 5vh;
     background-color: black;
     border: thick double #32a1ce;
     border-radius: 10px;
@@ -210,7 +212,10 @@ body {
     cursor: pointer;
   }
   .type-list {
-    z-index: 1;
+    display: flex;
+    flex-basis: 0;
+    justify-content: space-around;
+    flex-direction: column;
   }
 }
 
@@ -223,10 +228,15 @@ body {
   visibility: hidden;
 }
 .game {
-  z-index: 1;
   display: none;
-  justify-content: space-around;
-  margin-top: 80px;
+  .navigation-btn {
+    flex-direction: row;
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-around;
+
+  }
 }
 
 .navigation-btn {
@@ -235,28 +245,44 @@ body {
   margin-top: 10px;
   width: 100%;
   justify-content: space-around;
-  margin-bottom: 10px;
   button {
     width: 10rem;
   }
 }
 
 .card-img {
-  max-width: 80%;
+  max-width: 85%;
   margin: 0px 0px 0px 0px;
   border-radius: 30px;
+  max-height: 80vh;
 }
 
 .board {
-  overflow: hidden;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  .navigation-btn {
+    .active-btn-levels {
+
+      padding: 0px;
+    }
+  }
+
 }
 
-.type-list {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin-bottom: 10px;
+.little-header {
+  height: 12vh !important;
+  .title-neon-red {
+    font-size: 40px;
+    top: 0.4rem;
+    &:after {
+      @include stroke(10, $r);
+      filter: blur(10px);
+      opacity: 0.3;
+      color: $r;
+      z-index: 2;
+    }
+  }
+  .title-neon-blue {
+    font-size: 15px;
+  }
 }

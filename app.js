@@ -4,11 +4,12 @@ const btnChangeLevel = document.querySelector('.change-level-btn');
 const typeList = document.querySelector('#type-list');
 const board = document.querySelector('#board');
 const cardImg = document.querySelector('#card-img');
+const header = document.getElementById("header");
 let type = 'easy';
 
 btnStart.addEventListener('click', event => {
    event.preventDefault();
-   window.document.getElementsByClassName('start-btn')[0].style.visibility = 'hidden';
+   window.document.getElementsByClassName('start-btn')[0].style.display = 'none';
    window.document.getElementsByClassName('select-lvl')[0].style.visibility = 'unset';
 })
 
@@ -18,6 +19,7 @@ typeList.addEventListener('click', event => {
       window.document.getElementsByClassName('game')[0].style.display = 'flex';
       type = event.target.getAttribute('data-type');
       startGame();
+      header.className += " little-header";
    }
 })
 
@@ -30,6 +32,7 @@ btnChangeLevel.addEventListener('click', event => {
    event.preventDefault();
    window.document.getElementsByClassName('select-lvl')[0].style.display = 'flex';
    window.document.getElementsByClassName('game')[0].style.display = 'none';
+   header.classList.remove("little-header");
    cardImg.src = '';
 })
 

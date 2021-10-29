@@ -19,7 +19,7 @@ body {
   flex-direction: column;
 }
 .main-content .header {
-  height: 22vh;
+  height: 25vh;
   left: calc(50% - 200px);
   top: calc(50% - 150px);
 }
@@ -225,6 +225,8 @@ body {
 }
 .game-content .active-btn-levels {
   z-index: 1;
+  padding: 15px;
+  margin-bottom: 5vh;
   background-color: black;
   border: thick double #32a1ce;
   border-radius: 10px;
@@ -238,7 +240,10 @@ body {
   cursor: pointer;
 }
 .game-content .type-list {
-  z-index: 1;
+  display: flex;
+  flex-basis: 0;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .start-btn {
@@ -251,10 +256,14 @@ body {
 }
 
 .game {
-  z-index: 1;
   display: none;
+}
+.game .navigation-btn {
+  flex-direction: row;
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
   justify-content: space-around;
-  margin-top: 80px;
 }
 
 .navigation-btn {
@@ -263,30 +272,42 @@ body {
   margin-top: 10px;
   width: 100%;
   justify-content: space-around;
-  margin-bottom: 10px;
 }
 .navigation-btn button {
   width: 10rem;
 }
 
 .card-img {
-  max-width: 80%;
+  max-width: 85%;
   margin: 0px 0px 0px 0px;
   border-radius: 30px;
+  max-height: 80vh;
 }
 
 .board {
-  overflow: hidden;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+}
+.board .navigation-btn .active-btn-levels {
+  padding: 0px;
 }
 
-.type-list {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin-bottom: 10px;
+.little-header {
+  height: 12vh !important;
+}
+.little-header .title-neon-red {
+  font-size: 40px;
+  top: 0.4rem;
+}
+.little-header .title-neon-red:after {
+  text-shadow: 10px -10px #ff3300, -10px -10px #ff3300, -10px 10px #ff3300, -10px -10px #ff3300, 10px -9px #ff3300, -10px -9px #ff3300, -9px 10px #ff3300, -9px -10px #ff3300, 10px -8px #ff3300, -10px -8px #ff3300, -8px 10px #ff3300, -8px -10px #ff3300, 10px -7px #ff3300, -10px -7px #ff3300, -7px 10px #ff3300, -7px -10px #ff3300, 10px -6px #ff3300, -10px -6px #ff3300, -6px 10px #ff3300, -6px -10px #ff3300, 10px -5px #ff3300, -10px -5px #ff3300, -5px 10px #ff3300, -5px -10px #ff3300, 10px -4px #ff3300, -10px -4px #ff3300, -4px 10px #ff3300, -4px -10px #ff3300, 10px -3px #ff3300, -10px -3px #ff3300, -3px 10px #ff3300, -3px -10px #ff3300, 10px -2px #ff3300, -10px -2px #ff3300, -2px 10px #ff3300, -2px -10px #ff3300, 10px -1px #ff3300, -10px -1px #ff3300, -1px 10px #ff3300, -1px -10px #ff3300, 10px 0px #ff3300, -10px 0px #ff3300, 0px 10px #ff3300, 0px -10px #ff3300, 10px 1px #ff3300, -10px 1px #ff3300, 1px 10px #ff3300, 1px -10px #ff3300, 10px 2px #ff3300, -10px 2px #ff3300, 2px 10px #ff3300, 2px -10px #ff3300, 10px 3px #ff3300, -10px 3px #ff3300, 3px 10px #ff3300, 3px -10px #ff3300, 10px 4px #ff3300, -10px 4px #ff3300, 4px 10px #ff3300, 4px -10px #ff3300, 10px 5px #ff3300, -10px 5px #ff3300, 5px 10px #ff3300, 5px -10px #ff3300, 10px 6px #ff3300, -10px 6px #ff3300, 6px 10px #ff3300, 6px -10px #ff3300, 10px 7px #ff3300, -10px 7px #ff3300, 7px 10px #ff3300, 7px -10px #ff3300, 10px 8px #ff3300, -10px 8px #ff3300, 8px 10px #ff3300, 8px -10px #ff3300, 10px 9px #ff3300, -10px 9px #ff3300, 9px 10px #ff3300, 9px -10px #ff3300, 10px 10px #ff3300, -10px 10px #ff3300, 10px 10px #ff3300, 10px -10px #ff3300;
+  filter: blur(10px);
+  opacity: 0.3;
+  color: #ff3300;
+  z-index: 2;
+}
+.little-header .title-neon-blue {
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
