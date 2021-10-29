@@ -65,6 +65,7 @@ body {
   align-items: center;
   flex-direction: column;
   .header {
+    height: 22vh;
     left: calc(50% - 200px);
     top: calc(50% - 150px);
   }
@@ -73,7 +74,7 @@ body {
     color: $b;
     left: 50%;
     font-size: 30px;
-    top: 0.5rem;
+    top: 0.2rem;
     font-family: "Varela Round";
     text-transform: uppercase;
     transform: translateX(-50%);
@@ -82,7 +83,8 @@ body {
     cursor: pointer;
     @include flicker(0.25s);
     &:before {
-      content: "SEX";
+      @include stroke(2, $b);
+      content: "S♥X";
       position: absolute;
       left: 0;
       top: 0;
@@ -117,7 +119,7 @@ body {
   .title-neon-red {
     display: inline-block;
     color: $r;
-    top: 80px;
+    top: 1.4rem;
     font-family: "Draft Beer";
     font-size: 80px;
     margin: 0.25em 0;
@@ -219,7 +221,6 @@ body {
 
 .select-lvl {
   visibility: hidden;
-  margin-top: 80px;
 }
 .game {
   z-index: 1;

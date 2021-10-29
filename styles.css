@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Draft Beer";
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/lasenter.woff") format("woff");
@@ -18,6 +19,7 @@ body {
   flex-direction: column;
 }
 .main-content .header {
+  height: 22vh;
   left: calc(50% - 200px);
   top: calc(50% - 150px);
 }
@@ -26,7 +28,7 @@ body {
   color: #00b4de;
   left: 50%;
   font-size: 30px;
-  top: 0.5rem;
+  top: 0.2rem;
   font-family: "Varela Round";
   text-transform: uppercase;
   transform: translateX(-50%);
@@ -62,7 +64,8 @@ body {
   }
 }
 .main-content .title-neon-blue:before {
-  content: "SEX";
+  text-shadow: 2px -2px #00b4de, -2px -2px #00b4de, -2px 2px #00b4de, -2px -2px #00b4de, 2px -1px #00b4de, -2px -1px #00b4de, -1px 2px #00b4de, -1px -2px #00b4de, 2px 0px #00b4de, -2px 0px #00b4de, 0px 2px #00b4de, 0px -2px #00b4de, 2px 1px #00b4de, -2px 1px #00b4de, 1px 2px #00b4de, 1px -2px #00b4de, 2px 2px #00b4de, -2px 2px #00b4de, 2px 2px #00b4de, 2px -2px #00b4de;
+  content: "S♥X";
   position: absolute;
   left: 0;
   top: 0;
@@ -94,7 +97,7 @@ body {
 .main-content .title-neon-red {
   display: inline-block;
   color: #ff3300;
-  top: 80px;
+  top: 1.4rem;
   font-family: "Draft Beer";
   font-size: 80px;
   margin: 0.25em 0;
@@ -245,7 +248,6 @@ body {
 
 .select-lvl {
   visibility: hidden;
-  margin-top: 80px;
 }
 
 .game {
