@@ -299,4 +299,10 @@ body {
   font-size: 15px;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+}
+
 /*# sourceMappingURL=styles.css.map */
