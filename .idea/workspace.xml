@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df3121ea-8714-4a30-845f-cb2760a87282" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="203ZNUIaBy7YEEJZO0hi7OxnlDY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pets\sex-game\fonts" />
+      <recent name="D:\pets\sex-game" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pets\sex-game" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df3121ea-8714-4a30-845f-cb2760a87282" name="Default Changelist" comment="" />
+      <created>1635275191976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635275191976</updated>
+      <workItem from="1635275193142" duration="16364000" />
+      <workItem from="1635319812453" duration="12000" />
+      <workItem from="1635325754533" duration="1413000" />
+      <workItem from="1635364409177" duration="8778000" />
+      <workItem from="1635373369480" duration="3456000" />
+      <workItem from="1635509600726" duration="91000" />
+      <workItem from="1635538851507" duration="6861000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="987" y="343" key="#PHP" timestamp="1635373085688">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="987" y="343" key="#PHP/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635373085688" />
+    <state x="834" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1635279249699">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="834" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635279249699" />
+    <state x="905" y="268" width="1346" height="863" key="CommitChangelistDialog2" timestamp="1635545397881">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="905" y="268" width="1346" height="863" key="CommitChangelistDialog2/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635545397881" />
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1635374134245">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635374134245" />
+    <state x="949" y="478" key="EditFileWatcherDialog" timestamp="1635373750897">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="949" y="478" key="EditFileWatcherDialog/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635373750897" />
+    <state x="528" y="568" key="MultipleFileMergeDialog" timestamp="1635545412555">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="528" y="568" key="MultipleFileMergeDialog/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635545412555" />
+    <state x="1149" y="402" key="RollbackChangesDialog" timestamp="1635545396479">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1149" y="402" key="RollbackChangesDialog/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635545396479" />
+    <state x="1127" y="614" key="VCS.ChangelistChooser" timestamp="1635374088850">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1127" y="614" key="VCS.ChangelistChooser/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635374088850" />
+    <state x="987" y="433" width="585" height="534" key="find.popup" timestamp="1635540625201">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="987" y="433" width="585" height="534" key="find.popup/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635540625201" />
+    <state x="1081" y="488" key="git4idea.merge.GitMergeDialog" timestamp="1635509629507">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1081" y="488" key="git4idea.merge.GitMergeDialog/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635509629507" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1635545545086">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/2560.254.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1635545545086" />
+  </component>
+</project>
