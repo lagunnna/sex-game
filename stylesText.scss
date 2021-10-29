@@ -86,7 +86,7 @@ body {
       content: "S♥X";
       position: absolute;
       left: 0;
-      top: 40%;
+      top: 0;
       filter: blur(20px);
     }
   }
@@ -281,5 +281,5 @@ body {
 .logo {
   display: flex;
   flex-direction: column;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
