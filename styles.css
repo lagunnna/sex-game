@@ -10,7 +10,6 @@ body {
 }
 
 .main-content {
-  padding-top: 10vh;
   display: flex;
   background: black;
   width: 100%;
@@ -20,9 +19,11 @@ body {
   flex-direction: column;
 }
 .main-content .header {
-  display: flex;
+  position: relative;
+  top: 5vh;
+  /*display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;*/
 }
 .main-content .title-neon-blue {
   color: #00b4de;
@@ -290,6 +291,9 @@ body {
   padding: 0px;
 }
 
+.little-header {
+  top: 1vh !important;
+}
 .little-header .title-neon-red {
   font-size: 40px;
   top: 1vh;

@@ -57,7 +57,6 @@ body {
 }
 
 .main-content {
-  padding-top: 10vh;
   display: flex;
   background: black;
   width: 100%;
@@ -66,9 +65,11 @@ body {
   align-items: center;
   flex-direction: column;
   .header {
-    display: flex;
+    position: relative;
+    top: 5vh;
+    /*display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;*/
   }
   .title-neon-blue {
     color: $b;
@@ -268,6 +269,7 @@ body {
 }
 
 .little-header {
+  top: 1vh !important;
   .title-neon-red {
     font-size: 40px;
     top: 1vh;
