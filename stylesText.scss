@@ -71,25 +71,56 @@ body {
     flex-direction: column;
     justify-content: center;*/
   }
-  .title-neon-blue {
-    color: $b;
-    left: 50%;
-    font-size: 30px;
-    top: 0.2rem;
-    font-family: "Varela Round";
-    text-transform: uppercase;
-    transform: translateX(25%);
-    letter-spacing: 10px;
-    filter: blur(1 px);
-    cursor: pointer;
-    @include flicker(0.25s);
-    &:before {
-      @include stroke(2, $b);
-      content: "S♥X";
-      position: absolute;
-      left: 0;
-      top: 0;
-      filter: blur(20px);
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title-neon-blue {
+      color: $b;
+      left: 50%;
+      font-size: 30px;
+      font-family: "Varela Round";
+      text-transform: uppercase;
+      transform: translateX(25%);
+      letter-spacing: 10px;
+      filter: blur(1 px);
+      cursor: pointer;
+      @include flicker(0.25s);
+      &:before {
+        @include stroke(2, $b);
+        content: "S♥X";
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: blur(20px);
+      }
+    }
+    .title-neon-red {
+      display: inline-block;
+      color: $r;
+      font-family: "Draft Beer";
+      font-size: 80px;
+      transform: rotate(-15deg) skew(-15deg);
+      cursor: pointer;
+      top: 2vh;
+      @include flicker(4s);
+      z-index: 5;
+      &:before,
+      &:after {
+        content: "Game";
+        position: absolute;
+        filter: blur(5px);
+        z-index: -1;
+        left: 0;
+        top: 0;
+      }
+      &:after {
+        @include stroke(20, $r);
+        filter: blur(25px);
+        opacity: 0.5;
+        color: $r;
+        z-index: 2;
+      }
     }
   }
   .active-btn {
@@ -117,33 +148,7 @@ body {
     }
   }
 
-  .title-neon-red {
-    display: inline-block;
-    color: $r;
-    font-family: "Draft Beer";
-    font-size: 80px;
-    transform: rotate(-15deg) skew(-15deg);
-    cursor: pointer;
-    top: 2vh;
-    @include flicker(4s);
-    z-index: 5;
-    &:before,
-    &:after {
-      content: "Game";
-      position: absolute;
-      filter: blur(5px);
-      z-index: -1;
-      left: 0;
-      top: 0;
-    }
-    &:after {
-      @include stroke(20, $r);
-      filter: blur(25px);
-      opacity: 0.5;
-      color: $r;
-      z-index: 2;
-    }
-  }
+
 }
 
 .active-btn {
@@ -270,6 +275,7 @@ body {
 
 .little-header {
   top: 1vh !important;
+  .logo {
   .title-neon-red {
     font-size: 40px;
     top: 1vh;
@@ -283,5 +289,5 @@ body {
   }
   .title-neon-blue {
     font-size: 15px;
-  }
+  }}
 }
