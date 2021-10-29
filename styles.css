@@ -20,7 +20,6 @@ body {
 }
 .main-content .header {
   position: relative;
-  top: 5vh;
   /*display: flex;
   flex-direction: column;
   justify-content: center;*/
@@ -78,12 +77,9 @@ body {
   border-radius: 10px;
   padding: 10px;
   color: #00b4de;
-  left: 50%;
   font-size: 30px;
   font-family: "Varela Round";
   text-transform: uppercase;
-  transform: translateX(-50%);
-  bottom: 2%;
   letter-spacing: 10px;
   filter: blur(1 px);
 }
@@ -157,7 +153,6 @@ body {
   font-family: "Varela Round";
   text-transform: uppercase;
   transform: translateX(-50%);
-  bottom: 2%;
   letter-spacing: 10px;
   filter: blur(1 px);
 }
@@ -289,9 +284,6 @@ body {
   padding: 0px;
 }
 
-.little-header {
-  top: 2vh !important;
-}
 .little-header .title-neon-red {
   font-size: 40px;
   top: 1vh;
