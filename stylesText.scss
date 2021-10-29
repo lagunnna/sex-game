@@ -119,13 +119,13 @@ body {
   .title-neon-red {
     display: inline-block;
     color: $r;
-    top: 1.4rem;
     font-family: "Draft Beer";
     font-size: 80px;
     margin: 0.25em 0;
     transform: rotate(-15deg) skew(-15deg);
     position: relative;
     cursor: pointer;
+    top: 5vh;
     @include flicker(4s);
     z-index: 5;
     &:before,
@@ -273,7 +273,7 @@ body {
   height: 12vh !important;
   .title-neon-red {
     font-size: 40px;
-    top: 0.4rem;
+    top: 2vh;
     &:after {
       @include stroke(10, $r);
       filter: blur(10px);

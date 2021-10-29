@@ -97,13 +97,13 @@ body {
 .main-content .title-neon-red {
   display: inline-block;
   color: #ff3300;
-  top: 1.4rem;
   font-family: "Draft Beer";
   font-size: 80px;
   margin: 0.25em 0;
   transform: rotate(-15deg) skew(-15deg);
   position: relative;
   cursor: pointer;
+  top: 5vh;
   animation: flicker 4s linear infinite;
   z-index: 5;
 }
@@ -297,7 +297,7 @@ body {
 }
 .little-header .title-neon-red {
   font-size: 40px;
-  top: 0.4rem;
+  top: 2vh;
 }
 .little-header .title-neon-red:after {
   text-shadow: 10px -10px #ff3300, -10px -10px #ff3300, -10px 10px #ff3300, -10px -10px #ff3300, 10px -9px #ff3300, -10px -9px #ff3300, -9px 10px #ff3300, -9px -10px #ff3300, 10px -8px #ff3300, -10px -8px #ff3300, -8px 10px #ff3300, -8px -10px #ff3300, 10px -7px #ff3300, -10px -7px #ff3300, -7px 10px #ff3300, -7px -10px #ff3300, 10px -6px #ff3300, -10px -6px #ff3300, -6px 10px #ff3300, -6px -10px #ff3300, 10px -5px #ff3300, -10px -5px #ff3300, -5px 10px #ff3300, -5px -10px #ff3300, 10px -4px #ff3300, -10px -4px #ff3300, -4px 10px #ff3300, -4px -10px #ff3300, 10px -3px #ff3300, -10px -3px #ff3300, -3px 10px #ff3300, -3px -10px #ff3300, 10px -2px #ff3300, -10px -2px #ff3300, -2px 10px #ff3300, -2px -10px #ff3300, 10px -1px #ff3300, -10px -1px #ff3300, -1px 10px #ff3300, -1px -10px #ff3300, 10px 0px #ff3300, -10px 0px #ff3300, 0px 10px #ff3300, 0px -10px #ff3300, 10px 1px #ff3300, -10px 1px #ff3300, 1px 10px #ff3300, 1px -10px #ff3300, 10px 2px #ff3300, -10px 2px #ff3300, 2px 10px #ff3300, 2px -10px #ff3300, 10px 3px #ff3300, -10px 3px #ff3300, 3px 10px #ff3300, 3px -10px #ff3300, 10px 4px #ff3300, -10px 4px #ff3300, 4px 10px #ff3300, 4px -10px #ff3300, 10px 5px #ff3300, -10px 5px #ff3300, 5px 10px #ff3300, 5px -10px #ff3300, 10px 6px #ff3300, -10px 6px #ff3300, 6px 10px #ff3300, 6px -10px #ff3300, 10px 7px #ff3300, -10px 7px #ff3300, 7px 10px #ff3300, 7px -10px #ff3300, 10px 8px #ff3300, -10px 8px #ff3300, 8px 10px #ff3300, 8px -10px #ff3300, 10px 9px #ff3300, -10px 9px #ff3300, 9px 10px #ff3300, 9px -10px #ff3300, 10px 10px #ff3300, -10px 10px #ff3300, 10px 10px #ff3300, 10px -10px #ff3300;
