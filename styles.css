@@ -103,7 +103,7 @@ body {
   transform: rotate(-15deg) skew(-15deg);
   position: relative;
   cursor: pointer;
-  top: 5vh;
+  top: 15vh;
   animation: flicker 4s linear infinite;
   z-index: 5;
 }
