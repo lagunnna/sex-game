@@ -92,6 +92,8 @@ body {
   .active-btn {
     position: absolute;
     border: thick double #32a1ce;
+
+    background-color: black;
     border-radius: 10px;
     padding: 10px;
     color: $b;
@@ -115,7 +117,7 @@ body {
   .title-neon-red {
     display: inline-block;
     color: $r;
-    top: 0.5rem;
+    top: 80px;
     font-family: "Draft Beer";
     font-size: 80px;
     margin: 0.25em 0;
@@ -217,10 +219,13 @@ body {
 
 .select-lvl {
   visibility: hidden;
+  margin-top: 80px;
 }
 .game {
   z-index: 1;
   display: none;
+  justify-content: space-around;
+  margin-top: 80px;
 }
 
 .navigation-btn {
