@@ -65,19 +65,18 @@ body {
   align-items: center;
   flex-direction: column;
   .header {
-    height: 25vh;
-    left: calc(50% - 200px);
-    top: calc(50% - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .title-neon-blue {
-    position: absolute;
     color: $b;
     left: 50%;
     font-size: 30px;
     top: 0.2rem;
     font-family: "Varela Round";
     text-transform: uppercase;
-    transform: translateX(-50%);
+    transform: translateX(25%);
     letter-spacing: 10px;
     filter: blur(1 px);
     cursor: pointer;
@@ -121,11 +120,9 @@ body {
     color: $r;
     font-family: "Draft Beer";
     font-size: 80px;
-    margin: 0.25em 0;
     transform: rotate(-15deg) skew(-15deg);
-    position: relative;
     cursor: pointer;
-    top: 15vh;
+    top: 2vh;
     @include flicker(4s);
     z-index: 5;
     &:before,
@@ -273,7 +270,7 @@ body {
   height: 12vh !important;
   .title-neon-red {
     font-size: 40px;
-    top: 2vh;
+    top: 1vh;
     &:after {
       @include stroke(10, $r);
       filter: blur(10px);

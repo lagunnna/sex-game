@@ -19,19 +19,18 @@ body {
   flex-direction: column;
 }
 .main-content .header {
-  height: 25vh;
-  left: calc(50% - 200px);
-  top: calc(50% - 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .main-content .title-neon-blue {
-  position: absolute;
   color: #00b4de;
   left: 50%;
   font-size: 30px;
   top: 0.2rem;
   font-family: "Varela Round";
   text-transform: uppercase;
-  transform: translateX(-50%);
+  transform: translateX(25%);
   letter-spacing: 10px;
   filter: blur(1 px);
   cursor: pointer;
@@ -99,11 +98,9 @@ body {
   color: #ff3300;
   font-family: "Draft Beer";
   font-size: 80px;
-  margin: 0.25em 0;
   transform: rotate(-15deg) skew(-15deg);
-  position: relative;
   cursor: pointer;
-  top: 15vh;
+  top: 2vh;
   animation: flicker 4s linear infinite;
   z-index: 5;
 }
@@ -297,7 +294,7 @@ body {
 }
 .little-header .title-neon-red {
   font-size: 40px;
-  top: 2vh;
+  top: 1vh;
 }
 .little-header .title-neon-red:after {
   text-shadow: 10px -10px #ff3300, -10px -10px #ff3300, -10px 10px #ff3300, -10px -10px #ff3300, 10px -9px #ff3300, -10px -9px #ff3300, -9px 10px #ff3300, -9px -10px #ff3300, 10px -8px #ff3300, -10px -8px #ff3300, -8px 10px #ff3300, -8px -10px #ff3300, 10px -7px #ff3300, -10px -7px #ff3300, -7px 10px #ff3300, -7px -10px #ff3300, 10px -6px #ff3300, -10px -6px #ff3300, -6px 10px #ff3300, -6px -10px #ff3300, 10px -5px #ff3300, -10px -5px #ff3300, -5px 10px #ff3300, -5px -10px #ff3300, 10px -4px #ff3300, -10px -4px #ff3300, -4px 10px #ff3300, -4px -10px #ff3300, 10px -3px #ff3300, -10px -3px #ff3300, -3px 10px #ff3300, -3px -10px #ff3300, 10px -2px #ff3300, -10px -2px #ff3300, -2px 10px #ff3300, -2px -10px #ff3300, 10px -1px #ff3300, -10px -1px #ff3300, -1px 10px #ff3300, -1px -10px #ff3300, 10px 0px #ff3300, -10px 0px #ff3300, 0px 10px #ff3300, 0px -10px #ff3300, 10px 1px #ff3300, -10px 1px #ff3300, 1px 10px #ff3300, 1px -10px #ff3300, 10px 2px #ff3300, -10px 2px #ff3300, 2px 10px #ff3300, 2px -10px #ff3300, 10px 3px #ff3300, -10px 3px #ff3300, 3px 10px #ff3300, 3px -10px #ff3300, 10px 4px #ff3300, -10px 4px #ff3300, 4px 10px #ff3300, 4px -10px #ff3300, 10px 5px #ff3300, -10px 5px #ff3300, 5px 10px #ff3300, 5px -10px #ff3300, 10px 6px #ff3300, -10px 6px #ff3300, 6px 10px #ff3300, 6px -10px #ff3300, 10px 7px #ff3300, -10px 7px #ff3300, 7px 10px #ff3300, 7px -10px #ff3300, 10px 8px #ff3300, -10px 8px #ff3300, 8px 10px #ff3300, 8px -10px #ff3300, 10px 9px #ff3300, -10px 9px #ff3300, 9px 10px #ff3300, 9px -10px #ff3300, 10px 10px #ff3300, -10px 10px #ff3300, 10px 10px #ff3300, 10px -10px #ff3300;
