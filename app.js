@@ -1,5 +1,5 @@
 const btnStart = document.querySelector('#start');
-const btnGetCard = document.querySelector('.card-btn');
+const btnChangeCard = document.querySelector('.card-btn');
 const btnChangeLevel = document.querySelector('.changeLevel-btn');
 const screens = document.querySelectorAll('.screen');
 const typeList = document.querySelector('#type-list');
@@ -16,10 +16,11 @@ typeList.addEventListener('click', event => {
    if(event.target.classList.contains('type-btn')) {
       type = event.target.getAttribute('data-type');
       screens[1].classList.add('up');
+      startGame();
    }
 })
 
-btnGetCard.addEventListener('click', event => {
+btnChangeCard.addEventListener('click', event => {
    event.preventDefault();
    startGame();
 })
