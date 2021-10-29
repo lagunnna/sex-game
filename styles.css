@@ -180,7 +180,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -251,6 +250,7 @@ body {
 
 .select-lvl {
   visibility: hidden;
+  justify-content: space-between;
 }
 
 .game {
