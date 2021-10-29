@@ -289,9 +289,6 @@ body {
   padding: 0px;
 }
 
-.little-header {
-  height: 12vh !important;
-}
 .little-header .title-neon-red {
   font-size: 40px;
   top: 1vh;
