@@ -91,7 +91,6 @@ body {
     }
   }
   .active-btn {
-    position: absolute;
     border: thick double #32a1ce;
 
     background-color: black;
@@ -146,20 +145,22 @@ body {
   border-radius: 10px;
   padding: 10px;
   color: $b;
-  left: 50%;
   font-size: 30px;
   font-family: "Varela Round";
   text-transform: uppercase;
-  transform: translateX(-50%);
   letter-spacing: 10px;
   filter: blur(1 px);
   &:before {
     content: "Start";
-    position: absolute;
-    left: 0;
-    top: 0;
     filter: blur(20px);
   }
+}
+
+@font-face {
+  font-family: "Ethna";
+  src: url("fonts/ofont.ru_Ethna.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
@@ -179,10 +180,10 @@ body {
   .title-neon {
     color: $b;
     font-size: 1.5rem;
-    font-family: "Varela Round";
+    font-family: "Ethna";
     text-transform: uppercase;
     top: 30px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     filter: blur(1 px);
     @include flicker(0.25s);
     cursor: pointer;
@@ -197,7 +198,7 @@ body {
     color: $b;
     left: 50%;
     font-size: 18px;
-    font-family: "Varela Round";
+    font-family: "Ethna";
     text-transform: uppercase;
     bottom: 2%;
     letter-spacing: 5px;
@@ -214,10 +215,11 @@ body {
 .start-btn{
   visibility: unset;
   flex-wrap: inherit !important;
+  max-width: 200px;
 }
 
 .select-lvl {
-  visibility: hidden;
+  display: none;
 }
 .game {
   display: none;
@@ -283,3 +285,26 @@ body {
   flex-direction: column;
   margin-top: 1vh;
 }
+
+.hello-text-block {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  .hello-text {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    color: $b;
+    font-size: 15px;
+    font-family: "Ethna";
+    letter-spacing: 2px;
+  }
+  .hello-text-red {
+    color: $r;
+    cursor: pointer;
+    top: 2vh;
+    z-index: 5;
+  }
+}
+

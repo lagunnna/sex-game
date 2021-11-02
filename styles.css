@@ -71,7 +71,6 @@ body {
   filter: blur(20px);
 }
 .main-content .active-btn {
-  position: absolute;
   border: thick double #32a1ce;
   background-color: black;
   border-radius: 10px;
@@ -148,22 +147,23 @@ body {
   border-radius: 10px;
   padding: 10px;
   color: #00b4de;
-  left: 50%;
   font-size: 30px;
   font-family: "Varela Round";
   text-transform: uppercase;
-  transform: translateX(-50%);
   letter-spacing: 10px;
   filter: blur(1 px);
 }
 .active-btn:before {
   content: "Start";
-  position: absolute;
-  left: 0;
-  top: 0;
   filter: blur(20px);
 }
 
+@font-face {
+  font-family: "Ethna";
+  src: url("fonts/ofont.ru_Ethna.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 @font-face {
   font-family: "Varela Round";
   src: url("fonts/VarelaRound-Regular.ttf") format("truetype");
@@ -181,10 +181,10 @@ body {
 .game-content .title-neon {
   color: #00b4de;
   font-size: 1.5rem;
-  font-family: "Varela Round";
+  font-family: "Ethna";
   text-transform: uppercase;
   top: 30px;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   filter: blur(1 px);
   animation: flicker 0.25s linear infinite;
   cursor: pointer;
@@ -225,7 +225,7 @@ body {
   color: #00b4de;
   left: 50%;
   font-size: 18px;
-  font-family: "Varela Round";
+  font-family: "Ethna";
   text-transform: uppercase;
   bottom: 2%;
   letter-spacing: 5px;
@@ -241,10 +241,11 @@ body {
 .start-btn {
   visibility: unset;
   flex-wrap: inherit !important;
+  max-width: 200px;
 }
 
 .select-lvl {
-  visibility: hidden;
+  display: none;
 }
 
 .game {
@@ -303,6 +304,28 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 1vh;
+}
+
+.hello-text-block {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+.hello-text-block .hello-text {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  color: #00b4de;
+  font-size: 15px;
+  font-family: "Ethna";
+  letter-spacing: 2px;
+}
+.hello-text-block .hello-text-red {
+  color: #ff3300;
+  cursor: pointer;
+  top: 2vh;
+  z-index: 5;
 }
 
 /*# sourceMappingURL=styles.css.map */

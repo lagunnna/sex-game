@@ -9,8 +9,8 @@ let type = 'easy';
 
 btnStart.addEventListener('click', event => {
    event.preventDefault();
-   window.document.getElementsByClassName('start-btn')[0].style.display = 'none';
-   window.document.getElementsByClassName('select-lvl')[0].style.visibility = 'unset';
+   window.document.getElementsByClassName('hello-text-block')[0].style.display = 'none';
+   window.document.getElementsByClassName('select-lvl')[0].style.display = 'flex';
 })
 
 typeList.addEventListener('click', event => {
