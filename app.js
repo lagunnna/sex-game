@@ -14,10 +14,10 @@ btnStart.addEventListener('click', event => {
 })
 
 typeList.addEventListener('click', event => {
-   if(event.target.classList.contains('active-btn-levels')) {
+   type = event.target.getAttribute('data-type');
+   if(event.target.classList.contains('active-btn-levels') && !!type) {
       window.document.getElementsByClassName('select-lvl')[0].style.display = 'none';
       window.document.getElementsByClassName('game')[0].style.display = 'flex';
-      type = event.target.getAttribute('data-type');
       startGame();
       header.className += " little-header";
    }
