@@ -47,7 +47,6 @@ export default {
   .hello-text {
     font-size: 1rem;
     display: block;
-    font-family: 'Ethna';
     margin-bottom: 1em;
 
     @media (min-width: 50em) {

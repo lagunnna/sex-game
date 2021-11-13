@@ -8,7 +8,7 @@
 @import url('./assets/styles/index.scss');
 
 #app {
-  font-family: "Varela Round";
+  font-family: "Ethna";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

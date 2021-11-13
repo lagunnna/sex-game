@@ -35,7 +35,6 @@ export default {
 
   .active-btn-levels,
   .title-levels{
-    font-family: 'Ethna';
     text-transform: uppercase;
     letter-spacing: 0.3em;
     margin: 2em auto 0;

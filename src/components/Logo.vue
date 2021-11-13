@@ -37,6 +37,7 @@ export default {
 }
 .title-neon-blue {
   display: inline-block;
+  font-family: 'Varela Round';
   font-size: 2.5rem;
   line-height: 1;
   text-transform: uppercase;
