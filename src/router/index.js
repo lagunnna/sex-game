@@ -10,6 +10,16 @@ const routes = [
     name: 'Home',
     component: Home,
   },
+  {
+    path: '/selectLevel',
+    name: 'selectLevel',
+    component: () => import('../views/SelectLevel.vue'),
+  },
+  {
+    path: '/cards/:level',
+    name: 'cards',
+    component: () => import('../views/Cards.vue'),
+  },
 ];
 
 const router = new VueRouter({
