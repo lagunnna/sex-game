@@ -1,11 +1,71 @@
 <template>
   <div class="home">
-    <h1>Hi, bitches <span style='font-size:2rem;'>&#128520;</span></h1>
+    <Logo />
+    <div class="hello-text-block">
+      <span class="hello-text">
+        Здравствуйте, мы рады привествовать Вас в нашей игре.
+      </span>
+      <span class="hello-text">
+        Если хотите разнообразить интимную жизнь - эта игра специально для вас!
+      </span>
+      <span class="hello-text">
+        Нам очень важна Ваша обратная связь, пожалуйста, оставьте Ваш
+        <span class="hello-text-red">анонимный</span> отзыв и\или пожелания.
+      </span>
+      <span class="hello-text">
+        Приятной игры!
+      </span>
+    </div>
+    <router-link
+      tag='button'
+      :to='"/selectLevel"'
+      class="active-btn start-btn" id="start">
+      Начать</router-link>
   </div>
 </template>
 
 <script>
+import Logo from '@/components/Logo.vue';
+
 export default {
   name: 'Home',
+  components: {
+    Logo,
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.hello-text-block {
+  margin-top: 6em;
+
+  @media (min-width: 50em) {
+    margin-top: 3em;
+  }
+}
+
+  .hello-text {
+    font-size: 1rem;
+    display: block;
+    font-family: 'Ethna';
+    margin-bottom: 1em;
+
+    @media (min-width: 50em) {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+  }
+
+  .hello-text-red{
+    color: red;
+  }
+
+  .start-btn {
+    margin-top: 3em;
+    font-size: 1.7rem;
+
+    @media (min-width: 50em) {
+    font-size: 1rem;
+  }
+  }
+</style>
