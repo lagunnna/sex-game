@@ -54,7 +54,7 @@ export default {
     margin-top: 2em;
   }
 
-  .btns {
+  .btns-levels {
     display: flex;
     flex-direction: column;
   }
