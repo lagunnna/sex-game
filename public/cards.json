@@ -1,0 +1,368 @@
+{
+   "easy": [
+      {
+      "id": "easy1",
+      "imgSrc": "img/cards/easy/1.jpg"
+      },
+      {
+         "id": "easy2",
+         "imgSrc": "img/cards/easy/2.jpg"
+      },
+      {
+         "id": "easy3",
+         "imgSrc": "img/cards/easy/3.jpg"
+      },
+      {
+         "id": "easy4",
+         "imgSrc": "img/cards/easy/4.jpg"
+      },
+      {
+         "id": "easy5",
+         "imgSrc": "img/cards/easy/5.jpg"
+      },
+      {
+         "id": "easy6",
+         "imgSrc": "img/cards/easy/6.jpg"
+      },
+      {
+         "id": "easy7",
+         "imgSrc": "img/cards/easy/7.jpg"
+      },
+      {
+         "id": "easy8",
+         "imgSrc": "img/cards/easy/8.jpg"
+      },
+      {
+         "id": "easy9",
+         "imgSrc": "img/cards/easy/9.jpg"
+      },
+      {
+         "id": "easy10",
+         "imgSrc": "img/cards/easy/10.jpg"
+      },
+      {
+         "id": "easy11",
+         "imgSrc": "img/cards/easy/11.jpg"
+      },
+      {
+         "id": "easy12",
+         "imgSrc": "img/cards/easy/12.jpg"
+      },
+      {
+         "id": "easy13",
+         "imgSrc": "img/cards/easy/13.jpg"
+      },
+      {
+         "id": "easy14",
+         "imgSrc": "img/cards/easy/14.jpg"
+      },
+      {
+         "id": "easy15",
+         "imgSrc": "img/cards/easy/15.jpg"
+      },
+      {
+         "id": "easy16",
+         "imgSrc": "img/cards/easy/16.jpg"
+      },
+      {
+         "id": "easy17",
+         "imgSrc": "img/cards/easy/17.jpg"
+      },
+      {
+         "id": "easy18",
+         "imgSrc": "img/cards/easy/18.jpg"
+      },
+      {
+         "id": "easy19",
+         "imgSrc": "img/cards/easy/19.jpg"
+      },
+      {
+         "id": "easy20",
+         "imgSrc": "img/cards/easy/20.jpg"
+      },
+      {
+         "id": "easy21",
+         "imgSrc": "img/cards/easy/21.jpg"
+      },
+      {
+         "id": "easy22",
+         "imgSrc": "img/cards/easy/22.jpg"
+      },
+      {
+         "id": "easy23",
+         "imgSrc": "img/cards/easy/23.jpg"
+      },
+      {
+         "id": "easy24",
+         "imgSrc": "img/cards/easy/24.jpg"
+      },
+      {
+         "id": "easy25",
+         "imgSrc": "img/cards/easy/25.jpg"
+      },
+      {
+         "id": "easy26",
+         "imgSrc": "img/cards/easy/26.jpg"
+      },
+      {
+         "id": "easy27",
+         "imgSrc": "img/cards/easy/27.jpg"
+      },
+      {
+         "id": "easy28",
+         "imgSrc": "img/cards/easy/28.jpg"
+      },
+      {
+         "id": "easy29",
+         "imgSrc": "img/cards/easy/29.jpg"
+      },
+      {
+         "id": "easy30",
+         "imgSrc": "img/cards/easy/30.jpg"
+      }
+   ],
+   "norm": [
+      {
+         "id": "norm1",
+         "imgSrc": "img/cards/norm/1.jpg"
+         },
+         {
+            "id": "norm2",
+            "imgSrc": "img/cards/norm/2.jpg"
+         },
+         {
+            "id": "norm3",
+            "imgSrc": "img/cards/norm/3.jpg"
+         },
+         {
+            "id": "norm4",
+            "imgSrc": "img/cards/norm/4.jpg"
+         },
+         {
+            "id": "norm5",
+            "imgSrc": "img/cards/norm/5.jpg"
+         },
+         {
+            "id": "norm6",
+            "imgSrc": "img/cards/norm/6.jpg"
+         },
+         {
+            "id": "norm7",
+            "imgSrc": "img/cards/norm/7.jpg"
+         },
+         {
+            "id": "norm8",
+            "imgSrc": "img/cards/norm/8.jpg"
+         },
+         {
+            "id": "norm9",
+            "imgSrc": "img/cards/norm/9.jpg"
+         },
+         {
+            "id": "norm10",
+            "imgSrc": "img/cards/norm/10.jpg"
+         },
+         {
+            "id": "norm11",
+            "imgSrc": "img/cards/norm/11.jpg"
+         },
+         {
+            "id": "norm12",
+            "imgSrc": "img/cards/norm/12.jpg"
+         },
+         {
+            "id": "norm13",
+            "imgSrc": "img/cards/norm/13.jpg"
+         },
+         {
+            "id": "norm14",
+            "imgSrc": "img/cards/norm/14.jpg"
+         },
+         {
+            "id": "norm15",
+            "imgSrc": "img/cards/norm/15.jpg"
+         },
+         {
+            "id": "norm16",
+            "imgSrc": "img/cards/norm/16.jpg"
+         },
+         {
+            "id": "norm17",
+            "imgSrc": "img/cards/norm/17.jpg"
+         },
+         {
+            "id": "norm18",
+            "imgSrc": "img/cards/norm/18.jpg"
+         },
+         {
+            "id": "norm19",
+            "imgSrc": "img/cards/norm/19.jpg"
+         },
+         {
+            "id": "norm20",
+            "imgSrc": "img/cards/norm/20.jpg"
+         },
+         {
+            "id": "norm21",
+            "imgSrc": "img/cards/norm/21.jpg"
+         },
+         {
+            "id": "norm22",
+            "imgSrc": "img/cards/norm/22.jpg"
+         },
+         {
+            "id": "norm23",
+            "imgSrc": "img/cards/norm/23.jpg"
+         },
+         {
+            "id": "norm24",
+            "imgSrc": "img/cards/norm/24.jpg"
+         },
+         {
+            "id": "norm25",
+            "imgSrc": "img/cards/norm/25.jpg"
+         },
+         {
+            "id": "norm26",
+            "imgSrc": "img/cards/norm/26.jpg"
+         },
+         {
+            "id": "norm27",
+            "imgSrc": "img/cards/norm/27.jpg"
+         },
+         {
+            "id": "norm28",
+            "imgSrc": "img/cards/norm/28.jpg"
+         },
+         {
+            "id": "norm29",
+            "imgSrc": "img/cards/norm/29.jpg"
+         },
+         {
+            "id": "norm30",
+            "imgSrc": "img/cards/norm/30.jpg"
+         }
+   ],
+   "hard": [
+      {
+         "id": "hard1",
+         "imgSrc": "img/cards/hard/1.jpg"
+         },
+         {
+            "id": "hard2",
+            "imgSrc": "img/cards/hard/2.jpg"
+         },
+         {
+            "id": "hard3",
+            "imgSrc": "img/cards/hard/3.jpg"
+         },
+         {
+            "id": "hard4",
+            "imgSrc": "img/cards/hard/4.jpg"
+         },
+         {
+            "id": "hard5",
+            "imgSrc": "img/cards/hard/5.jpg"
+         },
+         {
+            "id": "hard6",
+            "imgSrc": "img/cards/hard/6.jpg"
+         },
+         {
+            "id": "hard7",
+            "imgSrc": "img/cards/hard/7.jpg"
+         },
+         {
+            "id": "hard8",
+            "imgSrc": "img/cards/hard/8.jpg"
+         },
+         {
+            "id": "hard9",
+            "imgSrc": "img/cards/hard/9.jpg"
+         },
+         {
+            "id": "hard10",
+            "imgSrc": "img/cards/hard/10.jpg"
+         },
+         {
+            "id": "hard11",
+            "imgSrc": "img/cards/hard/11.jpg"
+         },
+         {
+            "id": "hard12",
+            "imgSrc": "img/cards/hard/12.jpg"
+         },
+         {
+            "id": "hard13",
+            "imgSrc": "img/cards/hard/13.jpg"
+         },
+         {
+            "id": "hard14",
+            "imgSrc": "img/cards/hard/14.jpg"
+         },
+         {
+            "id": "hard15",
+            "imgSrc": "img/cards/hard/15.jpg"
+         },
+         {
+            "id": "hard16",
+            "imgSrc": "img/cards/hard/16.jpg"
+         },
+         {
+            "id": "hard17",
+            "imgSrc": "img/cards/hard/17.jpg"
+         },
+         {
+            "id": "hard18",
+            "imgSrc": "img/cards/hard/18.jpg"
+         },
+         {
+            "id": "hard19",
+            "imgSrc": "img/cards/hard/19.jpg"
+         },
+         {
+            "id": "hard20",
+            "imgSrc": "img/cards/hard/20.jpg"
+         },
+         {
+            "id": "hard21",
+            "imgSrc": "img/cards/hard/21.jpg"
+         },
+         {
+            "id": "hard22",
+            "imgSrc": "img/cards/hard/22.jpg"
+         },
+         {
+            "id": "hard23",
+            "imgSrc": "img/cards/hard/23.jpg"
+         },
+         {
+            "id": "hard24",
+            "imgSrc": "img/cards/hard/24.jpg"
+         },
+         {
+            "id": "hard25",
+            "imgSrc": "img/cards/hard/25.jpg"
+         },
+         {
+            "id": "hard26",
+            "imgSrc": "img/cards/hard/26.jpg"
+         },
+         {
+            "id": "hard27",
+            "imgSrc": "img/cards/hard/27.jpg"
+         },
+         {
+            "id": "hard28",
+            "imgSrc": "img/cards/hard/28.jpg"
+         },
+         {
+            "id": "hard29",
+            "imgSrc": "img/cards/hard/29.jpg"
+         },
+         {
+            "id": "hard30",
+            "imgSrc": "img/cards/hard/30.jpg"
+         }
+   ]
+}
