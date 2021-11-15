@@ -1,7 +1,7 @@
 <template>
   <div class="small">
     <Logo />
-    <div class="content">
+    <div class="content" v-if="currentСard">
       <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
         Выбрать уровень</router-link>
       <img
@@ -13,6 +13,12 @@
         @click.prevent="getNextCard"
         >Следующая карточка</button>
     </div>
+    <div class="no-content" v-else>
+      <h5 >Карточки кончились :(</h5>
+      <h5> Самое время сменить уровень</h5>
+      <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
+        Выбрать уровень</router-link>
+    </div>
   </div>
 </template>
 
@@ -23,7 +29,6 @@ export default {
   name: 'cards',
   data: () => ({
     currentСard: null,
-    currentLevel: null,
     cards: null,
     publicPath: process.env.BASE_URL,
   }),
@@ -33,8 +38,8 @@ export default {
     },
   },
   async mounted() {
-    this.currentLevel = this.$route.params.level;
-    this.cards = await this.$store.dispatch('fetchCards', this.currentLevel);
+    const { level } = this.$route.params;
+    this.cards = await this.$store.dispatch('fetchCards', level);
     this.currentСard = this.getRandomCard(1, this.cards.length);
   },
   methods: {
@@ -43,11 +48,10 @@ export default {
       this.currentСard = this.getRandomCard(1, this.cards.length);
     },
     getRandomCard(min, max) {
-      const card = this.cards[Math.round(Math.random() * (max - min) + min)];
-      return card;
+      return this.cards[Math.round(Math.random() * (max - min) + min)];
     },
     removeCardFromArray() {
-      this.cards.filter((c) => c.id !== this.currentСard.id);
+      this.cards = this.cards.filter((c) => c.id !== this.currentСard.id);
     },
   },
   components: {
@@ -60,9 +64,12 @@ export default {
   .card-img{
     width: 16em;
     border-radius: 30px;
+    box-shadow: 0 0 3em rgba(117, 230, 255, 0.15);
 
     @media (max-width: 50em) {
     width: 25em;
+    box-shadow: 0 0 4em rgba(117, 230, 255, 0.15);
+
   }
   }
 
@@ -85,6 +92,18 @@ export default {
 
     @media (min-width: 50em) {
     flex-direction: row;
+    }
+  }
+
+  .no-content {
+    margin-top: 6em;
+
+    @media (max-width: 50em) {
+      margin-top: 12em;
+
+      .active-btn{
+        margin-top: 17em;
+      }
     }
   }
 </style>
