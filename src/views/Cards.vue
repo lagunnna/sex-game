@@ -29,7 +29,7 @@ export default {
   name: 'cards',
   data: () => ({
     currentСard: null,
-    cards: null,
+    cards: [],
     publicPath: process.env.BASE_URL,
   }),
   computed: {
@@ -38,17 +38,16 @@ export default {
     },
   },
   async mounted() {
-    const { level } = this.$route.params;
-    this.cards = await this.$store.dispatch('fetchCards', level);
-    this.currentСard = this.getRandomCard(1, this.cards.length);
+    this.cards = await this.$store.getters.cardsByCurrentLevel;
+    this.currentСard = this.getRandomCard(this.cards.length);
   },
   methods: {
     getNextCard() {
       this.removeCardFromArray();
-      this.currentСard = this.getRandomCard(1, this.cards.length);
+      this.currentСard = this.getRandomCard(this.cards.length);
     },
-    getRandomCard(min, max) {
-      return this.cards[Math.round(Math.random() * (max - min) + min)];
+    getRandomCard(max) {
+      return this.cards[Math.round(Math.random() * (max - 1) + 1)] || this.cards[0];
     },
     removeCardFromArray() {
       this.cards = this.cards.filter((c) => c.id !== this.currentСard.id);

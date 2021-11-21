@@ -5,9 +5,9 @@
     <div class="btns-levels">
       <button
       v-for="l of levels"
-      :key="l.level"
+      :key="l.id"
       class="active-btn active-btn-levels"
-      @click="$router.push('/cards/' + l.level)"
+      @click="() => setCurrentLevel(l)"
       >{{l.title}}</button>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdX8WJ8jmMZNloNDKaDJazrZ12qzvAbL58dvOgeHo6oPVyPow/viewform" target="_blank" rel="noopener noreferrer" class="active-btn-levels active-btn">Оставить отзыв</a>
     </div>
@@ -15,15 +15,22 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Logo from '../components/Logo.vue';
 
 export default {
   name: 'selectLevel',
-  data: () => ({
-    levels: [],
-  }),
+  computed: {
+    ...mapGetters(['levels']),
+  },
   mounted() {
-    this.levels = this.$store.getters.levels;
+    this.$store.dispatch('fetchLevels');
+  },
+  methods: {
+    setCurrentLevel(level) {
+      this.$store.commit('setCurrentLevel', level.id);
+      this.$router.push(`/cards/${level.path}`);
+    },
   },
   components: {
     Logo,

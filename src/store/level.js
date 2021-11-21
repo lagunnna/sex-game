@@ -1,19 +1,23 @@
 export default {
   state: {
     currentLevel: null,
-    levels: [
-      { title: 'легкий', level: 'easy' },
-      { title: 'средний', level: 'norm' },
-      { title: 'сложный', level: 'hard' },
-    ],
+    levels: [],
+  },
+  mutations: {
+    setLevels(state, levels) {
+      state.levels = levels;
+    },
+    setCurrentLevel(state, level) {
+      state.currentLevel = level;
+    },
   },
   actions: {
-    async fetchCards({ commit }, level) {
+    async fetchLevels({ commit }) {
       try {
         const res = await fetch(`${process.env.BASE_URL}cards.json/`)
           .then((r) => r.json());
-        const cards = res[level];
-        return cards;
+        const levels = Object.keys(res).map((level) => ({ ...res[level], path: level, id: level }));
+        commit('setLevels', levels);
       } catch (e) {
         commit('setError', e);
         throw e;
@@ -23,5 +27,6 @@ export default {
   getters: {
     currentLevel: (s) => s.currentLevel,
     levels: (s) => s.levels,
+    cardsByCurrentLevel: (s, { currentLevel }) => s.levels.find((l) => l.id === currentLevel).cards,
   },
 };

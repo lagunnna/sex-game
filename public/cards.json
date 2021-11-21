@@ -1,128 +1,133 @@
 {
-   "easy": [
-      {
-      "id": "easy1",
-      "imgSrc": "img/cards/easy/1.jpg"
-      },
-      {
-         "id": "easy2",
-         "imgSrc": "img/cards/easy/2.jpg"
-      },
-      {
-         "id": "easy3",
-         "imgSrc": "img/cards/easy/3.jpg"
-      },
-      {
-         "id": "easy4",
-         "imgSrc": "img/cards/easy/4.jpg"
-      },
-      {
-         "id": "easy5",
-         "imgSrc": "img/cards/easy/5.jpg"
-      },
-      {
-         "id": "easy6",
-         "imgSrc": "img/cards/easy/6.jpg"
-      },
-      {
-         "id": "easy7",
-         "imgSrc": "img/cards/easy/7.jpg"
-      },
-      {
-         "id": "easy8",
-         "imgSrc": "img/cards/easy/8.jpg"
-      },
-      {
-         "id": "easy9",
-         "imgSrc": "img/cards/easy/9.jpg"
-      },
-      {
-         "id": "easy10",
-         "imgSrc": "img/cards/easy/10.jpg"
-      },
-      {
-         "id": "easy11",
-         "imgSrc": "img/cards/easy/11.jpg"
-      },
-      {
-         "id": "easy12",
-         "imgSrc": "img/cards/easy/12.jpg"
-      },
-      {
-         "id": "easy13",
-         "imgSrc": "img/cards/easy/13.jpg"
-      },
-      {
-         "id": "easy14",
-         "imgSrc": "img/cards/easy/14.jpg"
-      },
-      {
-         "id": "easy15",
-         "imgSrc": "img/cards/easy/15.jpg"
-      },
-      {
-         "id": "easy16",
-         "imgSrc": "img/cards/easy/16.jpg"
-      },
-      {
-         "id": "easy17",
-         "imgSrc": "img/cards/easy/17.jpg"
-      },
-      {
-         "id": "easy18",
-         "imgSrc": "img/cards/easy/18.jpg"
-      },
-      {
-         "id": "easy19",
-         "imgSrc": "img/cards/easy/19.jpg"
-      },
-      {
-         "id": "easy20",
-         "imgSrc": "img/cards/easy/20.jpg"
-      },
-      {
-         "id": "easy21",
-         "imgSrc": "img/cards/easy/21.jpg"
-      },
-      {
-         "id": "easy22",
-         "imgSrc": "img/cards/easy/22.jpg"
-      },
-      {
-         "id": "easy23",
-         "imgSrc": "img/cards/easy/23.jpg"
-      },
-      {
-         "id": "easy24",
-         "imgSrc": "img/cards/easy/24.jpg"
-      },
-      {
-         "id": "easy25",
-         "imgSrc": "img/cards/easy/25.jpg"
-      },
-      {
-         "id": "easy26",
-         "imgSrc": "img/cards/easy/26.jpg"
-      },
-      {
-         "id": "easy27",
-         "imgSrc": "img/cards/easy/27.jpg"
-      },
-      {
-         "id": "easy28",
-         "imgSrc": "img/cards/easy/28.jpg"
-      },
-      {
-         "id": "easy29",
-         "imgSrc": "img/cards/easy/29.jpg"
-      },
-      {
-         "id": "easy30",
-         "imgSrc": "img/cards/easy/30.jpg"
-      }
-   ],
-   "norm": [
-      {
+   "easy": {
+      "title": "легкий",
+      "cards": [
+         {
+         "id": "easy1",
+         "imgSrc": "img/cards/easy/1.jpg"
+         },
+         {
+            "id": "easy2",
+            "imgSrc": "img/cards/easy/2.jpg"
+         },
+         {
+            "id": "easy3",
+            "imgSrc": "img/cards/easy/3.jpg"
+         },
+         {
+            "id": "easy4",
+            "imgSrc": "img/cards/easy/4.jpg"
+         },
+         {
+            "id": "easy5",
+            "imgSrc": "img/cards/easy/5.jpg"
+         },
+         {
+            "id": "easy6",
+            "imgSrc": "img/cards/easy/6.jpg"
+         },
+         {
+            "id": "easy7",
+            "imgSrc": "img/cards/easy/7.jpg"
+         },
+         {
+            "id": "easy8",
+            "imgSrc": "img/cards/easy/8.jpg"
+         },
+         {
+            "id": "easy9",
+            "imgSrc": "img/cards/easy/9.jpg"
+         },
+         {
+            "id": "easy10",
+            "imgSrc": "img/cards/easy/10.jpg"
+         },
+         {
+            "id": "easy11",
+            "imgSrc": "img/cards/easy/11.jpg"
+         },
+         {
+            "id": "easy12",
+            "imgSrc": "img/cards/easy/12.jpg"
+         },
+         {
+            "id": "easy13",
+            "imgSrc": "img/cards/easy/13.jpg"
+         },
+         {
+            "id": "easy14",
+            "imgSrc": "img/cards/easy/14.jpg"
+         },
+         {
+            "id": "easy15",
+            "imgSrc": "img/cards/easy/15.jpg"
+         },
+         {
+            "id": "easy16",
+            "imgSrc": "img/cards/easy/16.jpg"
+         },
+         {
+            "id": "easy17",
+            "imgSrc": "img/cards/easy/17.jpg"
+         },
+         {
+            "id": "easy18",
+            "imgSrc": "img/cards/easy/18.jpg"
+         },
+         {
+            "id": "easy19",
+            "imgSrc": "img/cards/easy/19.jpg"
+         },
+         {
+            "id": "easy20",
+            "imgSrc": "img/cards/easy/20.jpg"
+         },
+         {
+            "id": "easy21",
+            "imgSrc": "img/cards/easy/21.jpg"
+         },
+         {
+            "id": "easy22",
+            "imgSrc": "img/cards/easy/22.jpg"
+         },
+         {
+            "id": "easy23",
+            "imgSrc": "img/cards/easy/23.jpg"
+         },
+         {
+            "id": "easy24",
+            "imgSrc": "img/cards/easy/24.jpg"
+         },
+         {
+            "id": "easy25",
+            "imgSrc": "img/cards/easy/25.jpg"
+         },
+         {
+            "id": "easy26",
+            "imgSrc": "img/cards/easy/26.jpg"
+         },
+         {
+            "id": "easy27",
+            "imgSrc": "img/cards/easy/27.jpg"
+         },
+         {
+            "id": "easy28",
+            "imgSrc": "img/cards/easy/28.jpg"
+         },
+         {
+            "id": "easy29",
+            "imgSrc": "img/cards/easy/29.jpg"
+         },
+         {
+            "id": "easy30",
+            "imgSrc": "img/cards/easy/30.jpg"
+         }
+      ]
+   },
+   "norm": { 
+   "title": "средний",
+   "cards":[
+         {
          "id": "norm1",
          "imgSrc": "img/cards/norm/1.jpg"
          },
@@ -242,9 +247,12 @@
             "id": "norm30",
             "imgSrc": "img/cards/norm/30.jpg"
          }
-   ],
-   "hard": [
-      {
+      ]
+   },
+   "hard": {
+      "title": "сложный",
+      "cards": [
+         {
          "id": "hard1",
          "imgSrc": "img/cards/hard/1.jpg"
          },
@@ -364,5 +372,6 @@
             "id": "hard30",
             "imgSrc": "img/cards/hard/30.jpg"
          }
-   ]
+      ]
+   }
 }
