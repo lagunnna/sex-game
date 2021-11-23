@@ -1,7 +1,7 @@
 <template>
   <div class="small">
     <Logo />
-    <div class="content" v-if="currentСard">
+    <div class="content" v-if="currentCard">
       <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
         Выбрать уровень</router-link>
       <img
@@ -10,7 +10,7 @@
         class="card-img">
       <button
         class="active-btn active-btn-cards"
-        @click.prevent="getNextCard"
+        @click.prevent="clickOnNextCard"
         >Следующая карточка</button>
     </div>
     <div class="no-content" v-else>
@@ -28,29 +28,26 @@ import Logo from '../components/Logo.vue';
 export default {
   name: 'cards',
   data: () => ({
-    currentСard: null,
     cards: [],
     publicPath: process.env.BASE_URL,
   }),
   computed: {
     imgSrc() {
-      return this.publicPath + this.currentСard?.imgSrc;
+      return this.publicPath + this.currentCard?.imgSrc;
+    },
+    currentCard() {
+      return this.getRandomCard(this.cards.length);
     },
   },
-  async mounted() {
-    this.cards = await this.$store.getters.cardsByCurrentLevel;
-    this.currentСard = this.getRandomCard(this.cards.length);
+  mounted() {
+    this.cards = this.$store.getters.cardsByCurrentLevel;
   },
   methods: {
-    getNextCard() {
-      this.removeCardFromArray();
-      this.currentСard = this.getRandomCard(this.cards.length);
+    clickOnNextCard() {
+      this.cards = this.cards.filter((c) => c.id !== this.currentCard.id);
     },
     getRandomCard(max) {
-      return this.cards[Math.round(Math.random() * (max - 1) + 1)] || this.cards[0];
-    },
-    removeCardFromArray() {
-      this.cards = this.cards.filter((c) => c.id !== this.currentСard.id);
+      return this.cards[Math.floor(Math.random() * max)];
     },
   },
   components: {
