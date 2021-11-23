@@ -15,7 +15,13 @@ export default {
     async fetchLevels({ commit }) {
       try {
         const res = await fetch(`${process.env.BASE_URL}cards.json/`)
-          .then((r) => r.json());
+          .then((successResponse) => {
+            if (successResponse.status !== 200) {
+              return {};
+            }
+            return successResponse.json();
+          },
+          () => {});
         const levels = Object.keys(res).map((level) => ({ ...res[level], path: level, id: level }));
         commit('setLevels', levels);
       } catch (e) {
