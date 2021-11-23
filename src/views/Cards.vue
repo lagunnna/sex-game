@@ -36,7 +36,7 @@ export default {
       return this.publicPath + this.currentCard?.imgSrc;
     },
     currentCard() {
-      return this.getRandomCard(this.cards.length);
+      return this.cards[Math.floor(Math.random() * this.cards.length)];
     },
   },
   mounted() {
@@ -45,9 +45,6 @@ export default {
   methods: {
     clickOnNextCard() {
       this.cards = this.cards.filter((c) => c.id !== this.currentCard.id);
-    },
-    getRandomCard(max) {
-      return this.cards[Math.floor(Math.random() * max)];
     },
   },
   components: {
