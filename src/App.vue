@@ -7,6 +7,10 @@
 <style lang="scss">
 @import url('./assets/styles/index.scss');
 
+*{
+  background-color: #000;
+}
+
 #app {
   font-family: "Ethna";
   -webkit-font-smoothing: antialiased;

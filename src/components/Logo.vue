@@ -52,6 +52,7 @@ export default {
   line-height: 0.7;
   animation: neon .4s ease-in-out infinite alternate;
   text-shadow: 0 0 0.8em rgb(255, 51, 0), 0 0 0.8em rgb(255, 51, 0);
+  background-color: transparent;
 }
 
 @keyframes neon {
