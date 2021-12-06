@@ -99,13 +99,25 @@ export default {
     isAdult: { checked: (c) => c },
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       if (this.$v.$invalid) {
         this.$v.$touch();
         return;
       }
 
-      this.$router.push('/');
+      const formData = {
+        name: this.name,
+        email: this.email,
+        password: this.password,
+        isMan: this.isMan,
+      };
+
+      try {
+        await this.$store.dispatch('register', formData);
+        this.$router.push('/');
+      } catch (error) {
+        this.password = '';
+      }
     },
   },
 
