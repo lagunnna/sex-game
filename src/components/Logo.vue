@@ -18,7 +18,7 @@ export default {
   padding: 1em;
 }
 
-.small {
+.small-logo {
   .title-neon-blue {
     font-size: 1.5rem;
 

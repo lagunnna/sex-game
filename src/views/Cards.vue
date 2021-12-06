@@ -1,30 +1,25 @@
 <template>
-  <div class="small">
-    <Logo />
-    <div class="content" v-if="currentCard">
-      <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
-        Выбрать уровень</router-link>
-      <img
-        :src="imgSrc"
-        alt="card"
-        class="card-img">
-      <button
-        class="active-btn active-btn-cards"
-        @click.prevent="clickOnNextCard"
-        >Следующая карточка</button>
-    </div>
-    <div class="no-content" v-else>
-      <h5 >Карточки кончились :(</h5>
-      <h5> Самое время сменить уровень</h5>
-      <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
-        Выбрать уровень</router-link>
-    </div>
+  <div class="content" v-if="currentCard">
+    <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
+      Выбрать уровень</router-link>
+    <img
+      :src="imgSrc"
+      alt="card"
+      class="card-img">
+    <button
+      class="active-btn active-btn-cards"
+      @click.prevent="clickOnNextCard"
+      >Следующая карточка</button>
+  </div>
+  <div class="no-content" v-else>
+    <h5 >Карточки кончились :(</h5>
+    <h5> Самое время сменить уровень</h5>
+    <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
+      Выбрать уровень</router-link>
   </div>
 </template>
 
 <script>
-import Logo from '../components/Logo.vue';
-
 export default {
   name: 'cards',
   data: () => ({
@@ -47,20 +42,17 @@ export default {
       this.cards = this.cards.filter((c) => c.id !== this.currentCard.id);
     },
   },
-  components: {
-    Logo,
-  },
 };
 </script>
 
 <style lang="scss" scoped>
   .card-img{
-    width: 16em;
+    width: 14em;
     border-radius: 30px;
     box-shadow: 0 0 3em rgba(117, 230, 255, 0.15);
 
     @media (max-width: 50em) {
-    width: 25em;
+    width: 23em;
     box-shadow: 0 0 4em rgba(117, 230, 255, 0.15);
 
   }
@@ -81,7 +73,7 @@ export default {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 1em;
 
     @media (min-width: 50em) {
     flex-direction: row;

@@ -1,8 +1,27 @@
 <template>
   <div id="app">
-    <router-view/>
+    <component :is="layout">
+      <router-view/>
+    </component>
   </div>
 </template>
+
+<script>
+import EmptyLayout from '@/layouts/EmptyLayout.vue';
+import MainLayout from '@/layouts/MainLayout.vue';
+import AuthLayout from '@/layouts/AuthLayout.vue';
+
+export default {
+  computed: {
+    layout() {
+      return `${this.$route.meta.layout || 'empty'}-layout`;
+    },
+  },
+  components: {
+    EmptyLayout, MainLayout, AuthLayout,
+  },
+};
+</script>
 
 <style lang="scss">
 @import url('./assets/styles/index.scss');
