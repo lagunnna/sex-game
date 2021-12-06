@@ -1,5 +1,6 @@
 <template>
   <div class="small-logo">
+    <Dropdown />
     <Logo />
     <main>
       <router-view />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import Dropdown from '../components/Dropdown.vue';
 import Logo from '../components/Logo.vue';
 
 export default {

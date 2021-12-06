@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import level from './level';
 import auth from './auth';
+import info from './info';
 
 Vue.use(Vuex);
 
@@ -18,6 +19,6 @@ export default new Vuex.Store({
     },
   },
   modules: {
-    level, auth,
+    level, auth, info,
   },
 });
