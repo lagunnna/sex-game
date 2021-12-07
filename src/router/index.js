@@ -9,16 +9,13 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    meta: {
-      auth: true,
-    },
     component: Home,
   },
   {
     path: '/selectLevel',
     name: 'selectLevel',
     meta: {
-      layout: 'main-layout', auth: true,
+      layout: 'main-layout',
     },
     component: () => import('../views/SelectLevel.vue'),
   },
@@ -26,7 +23,7 @@ const routes = [
     path: '/cards/:level',
     name: 'cards',
     meta: {
-      layout: 'main-layout', auth: true,
+      layout: 'main-layout',
     },
     component: () => import('../views/Cards.vue'),
   },
