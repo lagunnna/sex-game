@@ -10,7 +10,7 @@ const routes = [
     path: '/',
     name: 'Home',
     meta: {
-      layout: 'empty', auth: true,
+      auth: true,
     },
     component: Home,
   },
@@ -18,7 +18,7 @@ const routes = [
     path: '/selectLevel',
     name: 'selectLevel',
     meta: {
-      layout: 'main', auth: true,
+      layout: 'main-layout', auth: true,
     },
     component: () => import('../views/SelectLevel.vue'),
   },
@@ -26,7 +26,7 @@ const routes = [
     path: '/cards/:level',
     name: 'cards',
     meta: {
-      layout: 'main', auth: true,
+      layout: 'main-layout', auth: true,
     },
     component: () => import('../views/Cards.vue'),
   },
@@ -34,7 +34,7 @@ const routes = [
     path: '/login',
     name: 'login',
     meta: {
-      layout: 'auth',
+      layout: 'main-layout', noDropdown: true,
     },
     component: () => import('../views/Login.vue'),
   },
@@ -42,7 +42,7 @@ const routes = [
     path: '/register',
     name: 'register',
     meta: {
-      layout: 'auth',
+      layout: 'main-layout', noDropdown: true,
     },
     component: () => import('../views/Register.vue'),
   },
@@ -50,7 +50,7 @@ const routes = [
     path: '/profile',
     name: 'profile',
     meta: {
-      layout: 'main', auth: true,
+      layout: 'main-layout', auth: true,
     },
     component: () => import('../views/Profile.vue'),
   },

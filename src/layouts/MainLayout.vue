@@ -1,6 +1,6 @@
 <template>
   <div class="small-logo">
-    <Dropdown />
+    <Dropdown v-if='isDropdown' />
     <Logo />
     <main>
       <router-view />
@@ -14,9 +14,15 @@ import Logo from '../components/Logo.vue';
 
 export default {
   name: 'main-layout',
+  data: () => ({
+    isDropdown: true,
+  }),
   components: {
     Logo,
     Dropdown,
+  },
+  mounted() {
+    this.isDropdown = !this.$route.meta.noDropdown;
   },
 };
 </script>

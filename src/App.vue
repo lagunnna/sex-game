@@ -1,24 +1,23 @@
 <template>
   <div id="app">
-    <component :is="layout">
+    <component v-if="layout" :is="layout">
       <router-view/>
     </component>
+    <router-view v-else />
   </div>
 </template>
 
 <script>
-import EmptyLayout from '@/layouts/EmptyLayout.vue';
 import MainLayout from '@/layouts/MainLayout.vue';
-import AuthLayout from '@/layouts/AuthLayout.vue';
 
 export default {
   computed: {
     layout() {
-      return `${this.$route.meta.layout || 'empty'}-layout`;
+      return this.$route.meta.layout;
     },
   },
   components: {
-    EmptyLayout, MainLayout, AuthLayout,
+    MainLayout,
   },
 };
 </script>

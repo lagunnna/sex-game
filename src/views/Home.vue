@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Dropdown />
     <Logo />
     <div class="hello-text-block">
       <span class="hello-text">
@@ -25,12 +26,13 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue';
+import Logo from '../components/Logo.vue';
+import Dropdown from '../components/Dropdown.vue';
 
 export default {
   name: 'Home',
   components: {
-    Logo,
+    Logo, Dropdown,
   },
 };
 </script>
