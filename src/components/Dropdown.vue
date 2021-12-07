@@ -1,6 +1,6 @@
 <template>
   <div class="pos-absolute">
-    <button class="btn-toggle btn" @click.prevent="isOpen = !isOpen">
+    <button class="btn-toggle btn" @click.prevent="toggleMenu">
       <b-icon icon="person">Профиль</b-icon>
     </button>
     <menu class="menu" v-show="isOpen">
@@ -10,7 +10,7 @@
       <router-link to="/profile" tag="button" class="btn btn-profile">
         <b-icon icon="person">Профиль</b-icon>
       </router-link>
-      <button class="btn btn-cancel" @click.prevent="isOpen = !isOpen">
+      <button class="btn btn-cancel" @click.prevent="toggleMenu">
         <span>&#10005;</span>
       </button>
     </menu>
@@ -27,6 +27,9 @@ export default {
     logout() {
       this.$store.dispatch('logout');
       this.$router.push('/login');
+    },
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
     },
   },
 };
