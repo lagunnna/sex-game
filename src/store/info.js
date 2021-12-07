@@ -5,11 +5,20 @@ import { getAuth } from 'firebase/auth';
 
 export default {
   state: {
-    info: {},
+    info: {
+      name: '',
+      isMan: false,
+    },
   },
   mutations: {
     setInfo(state, info) {
       state.info = info;
+    },
+    setName(state, name) {
+      state.info.name = name;
+    },
+    setIsMan(state, isMan) {
+      state.info.isMan = isMan;
     },
   },
   actions: {

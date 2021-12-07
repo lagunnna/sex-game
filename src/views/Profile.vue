@@ -9,7 +9,7 @@
           id="name"
           type="text"
           class="input-no-border"
-          v-model.trim="$v.name.$model"
+          v-model.trim="name"
           :state="!$v.name.$error">
         </b-form-input>
         <b-form-invalid-feedback :state="!$v.name.$error">
@@ -55,22 +55,33 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'profile',
-  data: () => ({
-    name: '',
-    email: '',
-    isMan: false,
-  }),
   validations: {
     name: { required },
   },
   computed: {
     ...mapGetters(['info']),
+    email() {
+      return this.info.email;
+    },
+    name: {
+      get() {
+        return this.info.name;
+      },
+      set(newValue) {
+        this.$store.commit('setName', newValue);
+      },
+    },
+    isMan: {
+      get() {
+        return this.info.isMan;
+      },
+      set(newValue) {
+        this.$store.commit('setIsMan', newValue);
+      },
+    },
   },
   async mounted() {
     await this.$store.dispatch('getInfo');
-    this.name = this.info.name;
-    this.email = this.info.email;
-    this.isMan = this.info.isMan;
   },
   methods: {
     async onSubmit() {
