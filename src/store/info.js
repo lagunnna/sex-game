@@ -14,19 +14,19 @@ export default {
   },
   actions: {
     async getInfo({ commit }) {
-      const { uid } = getAuth().currentUser;
+      const userId = getAuth().currentUser.uid;
       const db = getDatabase();
-      const infoRef = ref(db, `/users/${uid}/info`);
+      const infoRef = ref(db, `/users/${userId}/info`);
       onValue(infoRef, (snapshot) => {
         const data = snapshot.val();
         commit('setInfo', data);
       });
     },
     async updateInfo({ commit, getters }, toUpdate) {
-      const { uid } = getAuth().currentUser;
+      const userId = getAuth().currentUser.uid;
       const db = getDatabase();
       const updateData = { ...getters.info, ...toUpdate };
-      const infoRef = ref(db, `/users/${uid}/info`);
+      const infoRef = ref(db, `/users/${userId}/info`);
       update(infoRef, updateData)
         .then(() => {
           commit('setInfo', updateData);
