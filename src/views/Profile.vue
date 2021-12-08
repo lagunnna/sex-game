@@ -51,7 +51,7 @@
 
 <script>
 import { required } from 'vuelidate/lib/validators';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions, mapMutations } from 'vuex';
 
 export default {
   name: 'profile',
@@ -67,30 +67,32 @@ export default {
       get() {
         return this.info.name;
       },
-      set(newValue) {
-        this.$store.commit('setName', newValue);
+      set(newName) {
+        this.setName(newName);
       },
     },
     isMan: {
       get() {
         return this.info.isMan;
       },
-      set(newValue) {
-        this.$store.commit('setIsMan', newValue);
+      set(isMan) {
+        this.setIsMan(isMan);
       },
     },
   },
   async mounted() {
-    await this.$store.dispatch('getInfo');
+    await this.getInfo();
   },
   methods: {
+    ...mapActions(['updateInfo', 'getInfo']),
+    ...mapMutations(['setName', 'setIsName']),
     async onSubmit() {
       if (this.$v.$invalid) {
         this.$v.$touch();
         return;
       }
 
-      await this.$store.dispatch('updateInfo', {
+      await this.updateInfo({
         name: this.name,
         isMan: this.isMan,
       });
