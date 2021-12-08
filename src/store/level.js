@@ -31,8 +31,10 @@ export default {
     },
   },
   getters: {
-    currentLevel: (s) => s.currentLevel,
-    levels: (s) => s.levels,
-    cardsByCurrentLevel: (s, { currentLevel }) => s.levels.find((l) => l.id === currentLevel).cards,
+    getCurrentLevel: (state) => state.currentLevel,
+    getLevels: (state) => state.levels,
+    getCardsByCurrentLevel: (state, { getCurrentLevel }) => (
+      state.levels.find((l) => l.id === getCurrentLevel).cards
+    ),
   },
 };

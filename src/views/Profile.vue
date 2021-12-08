@@ -66,13 +66,13 @@ export default {
     name: { required },
   },
   computed: {
-    ...mapGetters(['info']),
+    ...mapGetters(['getInfo']),
     email() {
-      return this.info.email;
+      return this.getInfo.email;
     },
     name: {
       get() {
-        return this.info.name;
+        return this.getInfo.name;
       },
       set(newName) {
         this.setName(newName);
@@ -80,7 +80,7 @@ export default {
     },
     isMan: {
       get() {
-        return this.info.isMan;
+        return this.getInfo.isMan;
       },
       set(isMan) {
         this.setIsMan(isMan);
@@ -88,10 +88,10 @@ export default {
     },
   },
   async mounted() {
-    await this.getInfo();
+    await this.loadInfo();
   },
   methods: {
-    ...mapActions(['updateInfo', 'getInfo']),
+    ...mapActions(['updateInfo', 'loadInfo']),
     ...mapMutations(['setName', 'setIsName']),
     async onSubmit() {
       if (this.$v.$invalid) {

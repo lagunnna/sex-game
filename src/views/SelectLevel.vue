@@ -29,7 +29,7 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'selectLevel',
   computed: {
-    ...mapGetters(['levels']),
+    ...mapGetters({ levels: 'getLevels' }),
   },
   mounted() {
     this.$store.dispatch('fetchLevels');

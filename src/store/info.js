@@ -22,7 +22,7 @@ export default {
     },
   },
   actions: {
-    async getInfo({ commit }) {
+    async loadInfo({ commit }) {
       const userId = getAuth().currentUser.uid;
       const db = getDatabase();
       const infoRef = ref(db, `/users/${userId}/info`);
@@ -34,7 +34,7 @@ export default {
     async updateInfo({ commit, getters }, toUpdate) {
       const userId = getAuth().currentUser.uid;
       const db = getDatabase();
-      const updateData = { ...getters.info, ...toUpdate };
+      const updateData = { ...getters.getInfo, ...toUpdate };
       const infoRef = ref(db, `/users/${userId}/info`);
       update(infoRef, updateData)
         .then(() => {
@@ -47,7 +47,7 @@ export default {
     },
   },
   getters: {
-    info: (state) => state.info,
+    getInfo: (state) => state.info,
   },
 
 };

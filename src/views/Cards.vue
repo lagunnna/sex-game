@@ -48,7 +48,7 @@ export default {
     },
   },
   mounted() {
-    this.cards = this.$store.getters.cardsByCurrentLevel;
+    this.cards = this.$store.getters.getCardsByCurrentLevel;
   },
   methods: {
     clickOnNextCard() {
