@@ -1,21 +1,34 @@
 <template>
-  <div class="content" v-if="currentCard">
-    <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
-      Выбрать уровень</router-link>
+  <div v-if="currentCard" class="content">
+    <router-link
+      :to="'/selectLevel'"
+      tag="button"
+      class="active-btn active-btn-cards"
+      >
+      Выбрать уровень
+    </router-link>
     <img
       :src="imgSrc"
       alt="card"
-      class="card-img">
+      class="card-img"
+    >
     <button
-      class="active-btn active-btn-cards"
       @click.prevent="clickOnNextCard"
-      >Следующая карточка</button>
+      class="active-btn active-btn-cards"
+      >
+      Следующая карточка
+    </button>
   </div>
-  <div class="no-content" v-else>
-    <h5 >Карточки кончились :(</h5>
-    <h5> Самое время сменить уровень</h5>
-    <router-link :to="'/selectLevel'" tag="button" class="active-btn active-btn-cards">
-      Выбрать уровень</router-link>
+  <div v-else class="no-content">
+    <h5>Карточки кончились :(</h5>
+    <h5>Самое время сменить уровень</h5>
+    <router-link
+      :to="'/selectLevel'"
+      tag="button"
+      class="active-btn active-btn-cards"
+      >
+      Выбрать уровень
+    </router-link>
   </div>
 </template>
 

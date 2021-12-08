@@ -4,12 +4,21 @@
     <h1 class="title-levels">Уровень сложности</h1>
     <div class="btns-levels">
       <button
-      v-for="level of levels"
-      :key="level.id"
-      class="active-btn active-btn-levels"
-      @click="setCurrentLevel(level)"
-      >{{level.title}}</button>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdX8WJ8jmMZNloNDKaDJazrZ12qzvAbL58dvOgeHo6oPVyPow/viewform" target="_blank" rel="noopener noreferrer" class="active-btn-levels active-btn">Оставить отзыв</a>
+        v-for="level of levels"
+        :key="level.id"
+        @click="setCurrentLevel(level)"
+        class="active-btn active-btn-levels"
+        >
+        {{level.title}}
+      </button>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdX8WJ8jmMZNloNDKaDJazrZ12qzvAbL58dvOgeHo6oPVyPow/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="active-btn-levels active-btn"
+        >
+        Оставить отзыв
+      </a>
     </div>
   </main>
 </template>

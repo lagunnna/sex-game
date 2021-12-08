@@ -1,43 +1,54 @@
 <template>
-  <form class="auth-form" @submit.prevent='onSubmit'>
+  <form @submit.prevent='onSubmit' class="auth-form">
     <h5 class="login-title">Войти</h5>
     <div class="login-content mb-4">
       <b-form-group
         label="e-mail"
-        label-for="email">
+        label-for="email"
+        >
         <b-form-input
-          id="email"
           type="email"
-          placeholder="введите e-mail"
+          id="email"
           v-model.trim="$v.email.$model"
-          :state="!$v.email.$error">
+          :state="!$v.email.$error"
+          placeholder="введите e-mail">
         </b-form-input>
       </b-form-group>
-      <b-form-invalid-feedback :state="!$v.email.$error">
-        введите корректный email</b-form-invalid-feedback>
+      <b-form-invalid-feedback
+        :state="!$v.email.$error"
+        >
+        введите корректный email
+      </b-form-invalid-feedback>
       <b-form-group
         label="пароль"
-        label-for="password">
+        label-for="password"
+        >
         <b-form-input
-          id="password"
           type="password"
-          placeholder="введите пароль"
+          id="password"
           v-model.trim="$v.password.$model"
-          :state="!$v.password.$error">
+          :state="!$v.password.$error"
+          placeholder="введите пароль">
         </b-form-input>
       </b-form-group>
-      <b-form-invalid-feedback :state="!$v.password.$error">
+      <b-form-invalid-feedback
+        :state="!$v.password.$error"
+        >
         пароль должен быть не менее {{$v.password.$params.minLength.min}} символов
       </b-form-invalid-feedback>
     </div>
     <div class="login-actions">
-      <button class="active-btn" type="submit">
+      <button type="submit"  class="active-btn">
         Войти
-        <b-icon icon="box-arrow-in-right" font-scale="1">send</b-icon>
+        <b-icon icon="box-arrow-in-right" font-scale="1">
+          send
+        </b-icon>
       </button>
       <p class="mt-1">
         Нет аккаунта?
-        <router-link to="/register">Регистрация</router-link>
+        <router-link to="/register">
+          Регистрация
+        </router-link>
       </p>
     </div>
   </form>

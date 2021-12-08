@@ -1,29 +1,34 @@
 <template>
-  <b-form class="profile-form" @submit.prevent="onSubmit">
+  <b-form @submit.prevent="onSubmit" class="profile-form">
     <h5 class="profile-title">Профиль</h5>
     <div class="profile-content mb-4">
       <b-form-group
         label="имя"
-        label-for="name">
+        label-for="name"
+        >
         <b-form-input
-          id="name"
           type="text"
-          class="input-no-border"
+          id="name"
           v-model.trim="name"
-          :state="!$v.name.$error">
+          :state="!$v.name.$error"
+          class="input-no-border">
         </b-form-input>
-        <b-form-invalid-feedback :state="!$v.name.$error">
-          введите имя</b-form-invalid-feedback>
+        <b-form-invalid-feedback
+          :state="!$v.name.$error"
+          >
+          введите имя
+        </b-form-invalid-feedback>
       </b-form-group>
       <b-form-group
         label="e-mail"
-        label-for="email">
+        label-for="email"
+        >
         <b-form-input
-          id="email"
           type="email"
-          class="input-no-border"
+          id="email"
+          disabled
           v-model.trim="email"
-          disabled>
+          class="input-no-border">
         </b-form-input>
       </b-form-group>
       <div class="form-switch mt-3 ps-0">
@@ -31,19 +36,21 @@
           for="isMan">
           жен
           <input
-            class="form-check-input"
             type="checkbox"
             id="isMan"
             role="switch"
-            v-model="isMan">
+            v-model="isMan"
+            class="form-check-input">
           муж
           </label>
       </div>
     </div>
     <div class="profile-actions">
-      <button class="active-btn" type="submit">
-      Сохранить
-        <b-icon icon="cloud-check" font-scale="1">save</b-icon>
+      <button type="submit" class="active-btn">
+        Сохранить
+          <b-icon icon="cloud-check" font-scale="1">
+            save
+          </b-icon>
       </button>
     </div>
   </b-form>

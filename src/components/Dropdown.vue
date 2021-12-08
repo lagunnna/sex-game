@@ -1,16 +1,20 @@
 <template>
   <div class="pos-absolute">
-    <button class="btn-toggle btn" @click.prevent="toggleMenu">
+    <button @click.prevent="toggleMenu" class="btn-toggle btn">
       <b-icon icon="person">Профиль</b-icon>
     </button>
-    <menu class="menu" v-show="isOpen">
-      <button class="btn btn-logout" @click.prevent="logout">
+    <menu v-show="isOpen" class="menu">
+      <button @click.prevent="logout" class="btn btn-logout">
         <b-icon icon="box-arrow-right">Выйти</b-icon>
       </button>
-      <router-link to="/profile" tag="button" class="btn btn-profile">
+      <router-link
+        to="/profile"
+        tag="button"
+        class="btn btn-profile"
+        >
         <b-icon icon="person">Профиль</b-icon>
       </router-link>
-      <button class="btn btn-cancel" @click.prevent="toggleMenu">
+      <button @click.prevent="toggleMenu" class="btn btn-cancel">
         <span>&#10005;</span>
       </button>
     </menu>

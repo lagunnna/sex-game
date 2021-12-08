@@ -1,55 +1,60 @@
 <template>
-  <form class="auth-form" @submit.prevent='onSubmit'>
+  <form @submit.prevent='onSubmit' class="auth-form">
     <h5 class="register-title">Зарегистрироваться</h5>
     <div class="register-content mb-4">
       <b-form-group
         label="имя"
-        label-for="name">
+        label-for="name"
+        >
         <b-form-input
-          id="name"
           type="text"
-          placeholder="введите имя"
+          id="name"
           v-model.trim="$v.name.$model"
-          :state="!$v.name.$error">
+          :state="!$v.name.$error"
+          placeholder="введите имя">
         </b-form-input>
         <b-form-invalid-feedback :state="!$v.name.$error">
-          введите имя</b-form-invalid-feedback>
+          введите имя
+        </b-form-invalid-feedback>
       </b-form-group>
       <div class="form-switch mt-2 ps-0">
         <label
           for="isMan">
           жен
           <input
-            class="form-check-input"
             type="checkbox"
             id="isMan"
             role="switch"
-            v-model="isMan">
+            v-model="isMan"
+            class="form-check-input">
           муж
           </label>
       </div>
       <b-form-group
         label="e-mail"
-        label-for="email">
+        label-for="email"
+        >
         <b-form-input
-          id="email"
           type="email"
-          placeholder="введите e-mail"
+          id="email"
           v-model.trim="$v.email.$model"
-          :state="!$v.email.$error">
+          :state="!$v.email.$error"
+          placeholder="введите e-mail">
         </b-form-input>
         <b-form-invalid-feedback :state="!$v.email.$error">
-          введите корректный email</b-form-invalid-feedback>
+          введите корректный email
+        </b-form-invalid-feedback>
       </b-form-group>
       <b-form-group
         label="пароль"
-        label-for="password">
+        label-for="password"
+        >
         <b-form-input
-          id="password"
           type="password"
-          placeholder="придумайте пароль"
+          id="password"
           v-model.trim="$v.password.$model"
-          :state="!$v.password.$error">
+          :state="!$v.password.$error"
+          placeholder="придумайте пароль">
         </b-form-input>
         <b-form-invalid-feedback :state="!$v.password.$error">
           пароль должен быть не менее {{$v.password.$params.minLength.min}} символов
@@ -57,20 +62,21 @@
       </b-form-group>
       <div class="checkbox mt-3">
         <input
-          class="form-check-input"
           type="checkbox"
           id="isAdult"
-          v-model="isAdult">
-        <label
-          for="isAdult"
-          class="mx-2">
-          мне есть 18 лет</label>
+          v-model="isAdult"
+          class="form-check-input">
+        <label for="isAdult" class="mx-2">
+          мне есть 18 лет
+        </label>
       </div>
     </div>
     <div class="register-actions">
-      <button class="active-btn" type="submit">
+      <button type="submit" class="active-btn">
         Зарегистрироваться
-        <b-icon icon="box-arrow-right" font-scale="1">send</b-icon>
+        <b-icon icon="box-arrow-right" font-scale="1">
+          send
+        </b-icon>
       </button>
       <p class="mt-1">
         Уже есть аккаунт?

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <component v-if="layout" :is="layout">
+    <component :is="layout" v-if="layout">
       <router-view/>
     </component>
     <router-view v-else />
