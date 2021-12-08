@@ -9,9 +9,6 @@ export default {
       const auth = getAuth();
 
       signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          console.log(userCredential.user);
-        })
         .catch((e) => {
           commit('setError', e);
           throw e;
