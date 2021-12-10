@@ -25,18 +25,19 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { FETCH_LEVELS, GET_LEVELS, SET_CURRENT_LEVEL } from '../store/modules/level/constants';
 
 export default {
   name: 'selectLevel',
   computed: {
-    ...mapGetters({ levels: 'getLevels' }),
+    ...mapGetters({ levels: GET_LEVELS }),
   },
   mounted() {
-    this.$store.dispatch('fetchLevels');
+    this.$store.dispatch(FETCH_LEVELS);
   },
   methods: {
     setCurrentLevel(level) {
-      this.$store.commit('setCurrentLevel', level.id);
+      this.$store.commit(SET_CURRENT_LEVEL, level.id);
       this.$router.push(`/cards/${level.path}`);
     },
   },

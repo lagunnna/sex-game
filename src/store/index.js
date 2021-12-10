@@ -1,23 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import level from './level';
-import auth from './auth';
-import info from './info';
+import state from './state';
+import mutations from './mutations';
+import auth from './modules/auth';
+import info from './modules/info';
+import level from './modules/level';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    error: null,
-  },
-  mutations: {
-    setError(state, error) {
-      state.error = error;
-    },
-    clearError(state) {
-      state.error = null;
-    },
-  },
+  state,
+  mutations,
   modules: {
     level, auth, info,
   },

@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import { LOGOUT } from '../store/modules/auth/constants';
+
 export default {
   name: 'dropdown',
   data: () => ({
@@ -29,7 +31,7 @@ export default {
   }),
   methods: {
     logout() {
-      this.$store.dispatch('logout');
+      this.$store.dispatch(LOGOUT);
       this.$router.push('/login');
     },
     toggleMenu() {

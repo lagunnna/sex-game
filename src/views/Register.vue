@@ -88,6 +88,7 @@
 
 <script>
 import { email, required, minLength } from 'vuelidate/lib/validators';
+import { REGISTER } from '../store/modules/auth/constants';
 
 export default {
   name: 'register',
@@ -119,7 +120,7 @@ export default {
       };
 
       try {
-        await this.$store.dispatch('register', formData);
+        await this.$store.dispatch(REGISTER, formData);
         this.$router.push('/');
       } catch (error) {
         this.password = '';

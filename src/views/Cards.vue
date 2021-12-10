@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import { GET_CARDS_BY_CURRENT_LEVEL } from '../store/modules/level/constants';
+
 export default {
   name: 'cards',
   data: () => ({
@@ -48,7 +50,7 @@ export default {
     },
   },
   mounted() {
-    this.cards = this.$store.getters.getCardsByCurrentLevel;
+    this.cards = this.$store.getters[GET_CARDS_BY_CURRENT_LEVEL];
   },
   methods: {
     clickOnNextCard() {
