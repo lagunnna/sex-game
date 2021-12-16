@@ -7,6 +7,14 @@ export default [
     component: Home,
   },
   {
+    path: '*',
+    name: 'notFound',
+    meta: {
+      layout: 'main-layout',
+    },
+    component: () => import('../views/NotFound.vue'),
+  },
+  {
     path: '/selectLevel',
     name: 'selectLevel',
     meta: {
