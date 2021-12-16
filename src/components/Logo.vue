@@ -11,7 +11,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .logo {
   display: flex;
   flex-flow: column;
@@ -19,6 +19,10 @@ export default {
 }
 
 .small-logo {
+  margin: 0 auto;
+  max-width: 8em;
+  cursor: pointer;
+
   .title-neon-blue {
     font-size: 1.5rem;
 

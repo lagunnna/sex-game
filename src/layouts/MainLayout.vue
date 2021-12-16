@@ -1,7 +1,12 @@
 <template>
-  <div class="small-logo">
+  <div>
     <Dropdown v-if='isDropdown' />
-    <Logo />
+    <router-link
+      to="/"
+      tag="div"
+      class="small-logo">
+      <Logo />
+    </router-link>
     <main>
       <router-view />
     </main>
