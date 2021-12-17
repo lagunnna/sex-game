@@ -11,17 +11,17 @@
 <script>
 export default {
   name: 'notFound',
-  // data: () => ({
-  //   timeout: null,
-  // }),
-  // created() {
-  //   this.timeout = setTimeout(() => {
-  //     this.$router.push('/');
-  //   }, 4000);
-  // },
-  // beforeDestroy() {
-  //   clearTimeout(this.timeout);
-  // },
+  data: () => ({
+    timeout: null,
+  }),
+  created() {
+    this.timeout = setTimeout(() => {
+      this.$router.push('/');
+    }, 4000);
+  },
+  beforeDestroy() {
+    clearTimeout(this.timeout);
+  },
 };
 </script>
 
@@ -40,7 +40,6 @@ export default {
     font-family: 'Plexi', arial;
     font-size: 8.5rem;
     color: rgb(0, 180, 222, 0.4);
-    animation: neon .4s ease-in-out infinite alternate;
     text-shadow: 0 0 2em #00b4de, 0 0 1em #00b4de;
     background-color: transparent;
 
