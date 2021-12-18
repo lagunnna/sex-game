@@ -30,9 +30,11 @@ export default {
     isOpen: false,
   }),
   methods: {
-    logout() {
-      this.$store.dispatch(LOGOUT);
-      this.$router.push('/login');
+    async logout() {
+      const isUserLoggedOut = await this.$store.dispatch(LOGOUT);
+      if (isUserLoggedOut) {
+        this.$router.push('/');
+      }
     },
     toggleMenu() {
       this.isOpen = !this.isOpen;
@@ -51,12 +53,14 @@ export default {
     top: 1em;
   }
   .btn-toggle{
-    position: relative;
+    position: fixed;
     border: none;
+    z-index: 1;
   }
   .menu {
     position: fixed;
     padding: 0;
+    z-index: 0;
   }
   .btn {
     border: none;
@@ -75,13 +79,17 @@ export default {
 
   .btn-profile {
     position: relative;
-    top: -0.9em;
-    left: 0.25em;
+    top: 0.2em;
   }
 
   .btn-cancel {
     position: relative;
-    top: -2.3em;
-    right: 0.1em;
+    top: -1em;
+    right: 0.3em;
+  }
+
+  .btn-logout {
+    position: relative;
+    top: 1.2em;
   }
 </style>
