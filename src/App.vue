@@ -1,14 +1,18 @@
 <template>
   <div id="app">
-    <component :is="layout" v-if="layout">
-      <router-view/>
-    </component>
+    <keep-alive  v-if="layout">
+      <component :is="layout">
+        <router-view/>
+      </component>
+    </keep-alive>
     <router-view v-else />
+    <NotificationList />
   </div>
 </template>
 
 <script>
 import MainLayout from '@/layouts/MainLayout.vue';
+import NotificationList from '@/components/NotificationList.vue';
 
 export default {
   computed: {
@@ -17,7 +21,7 @@ export default {
     },
   },
   components: {
-    MainLayout,
+    MainLayout, NotificationList,
   },
 };
 </script>

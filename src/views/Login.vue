@@ -80,11 +80,9 @@ export default {
         password: this.password,
       };
 
-      try {
-        await this.$store.dispatch(LOGIN, formData);
+      const isUserloggedIn = await this.$store.dispatch(LOGIN, formData);
+      if (isUserloggedIn) {
         this.$router.push('/');
-      } catch (error) {
-        this.password = '';
       }
     },
   },

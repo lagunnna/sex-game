@@ -3,44 +3,54 @@ import {
 } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
 import { LOGIN, LOGOUT, REGISTER } from './constants';
-import { SET_ERROR } from '../../constants';
+import { ADD_ERROR } from '../../constants';
+import { ADD_NOTIFICATION } from '../notification/constants';
+import messages from '../../../assets/messages';
 
 export default {
-  async [LOGIN]({ commit }, { email, password }) {
+  async [LOGIN]({ dispatch, commit }, { email, password }) {
     const auth = getAuth();
 
-    signInWithEmailAndPassword(auth, email, password)
-      .catch((e) => {
-        commit(SET_ERROR, e);
-        throw e;
-      });
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      commit(ADD_NOTIFICATION, messages.login);
+      return !!userCredential.user;
+    } catch (e) {
+      dispatch(ADD_ERROR, e);
+      throw e;
+    }
   },
-  async [REGISTER]({ commit }, {
+  async [REGISTER]({ dispatch, commit }, {
     name, email, password, isMan,
   }) {
     const auth = getAuth();
     const db = getDatabase();
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const { uid } = userCredential.user;
-        set(ref(db, `users/${uid}/info`), {
-          name,
-          email,
-          isMan,
-        });
-      })
-      .catch((e) => {
-        commit(SET_ERROR, e);
-        throw e;
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const { uid } = userCredential.user;
+      set(ref(db, `users/${uid}/info`), {
+        name,
+        email,
+        isMan,
       });
+
+      commit(ADD_NOTIFICATION, messages.login);
+      return true;
+    } catch (e) {
+      dispatch(ADD_ERROR, e);
+      throw e;
+    }
   },
-  async [LOGOUT]({ commit }) {
+  async [LOGOUT]({ dispatch, commit }) {
     const auth = getAuth();
-    await signOut(auth)
-      .catch((e) => {
-        commit(SET_ERROR, e);
-        throw e;
-      });
+    try {
+      await signOut(auth);
+      commit(ADD_NOTIFICATION, messages.logout);
+      return true;
+    } catch (e) {
+      dispatch(ADD_ERROR, e);
+      throw e;
+    }
   },
 };

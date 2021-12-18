@@ -119,11 +119,9 @@ export default {
         isMan: this.isMan,
       };
 
-      try {
-        await this.$store.dispatch(REGISTER, formData);
+      const isUserloggedIn = await this.$store.dispatch(REGISTER, formData);
+      if (isUserloggedIn) {
         this.$router.push('/');
-      } catch (error) {
-        this.password = '';
       }
     },
   },

@@ -1,8 +1,8 @@
 import { FETCH_LEVELS, SET_LEVELS } from './constants';
-import { SET_ERROR } from '../../constants';
+import { ADD_ERROR } from '../../constants';
 
 export default {
-  async [FETCH_LEVELS]({ commit }) {
+  async [FETCH_LEVELS]({ dispatch, commit }) {
     try {
       const res = await fetch(`${process.env.BASE_URL}cards.json/`)
         .then((successResponse) => {
@@ -15,7 +15,7 @@ export default {
       const levels = Object.keys(res).map((level) => ({ ...res[level], path: level, id: level }));
       commit(SET_LEVELS, levels);
     } catch (e) {
-      commit(SET_ERROR, e);
+      dispatch(ADD_ERROR, e);
       throw e;
     }
   },

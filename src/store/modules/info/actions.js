@@ -3,6 +3,9 @@ import {
 } from 'firebase/database';
 import { getAuth } from 'firebase/auth';
 import * as info from './constants';
+import { ADD_NOTIFICATION } from '@/store/modules/notification/constants';
+import { ADD_ERROR } from '@/store/constants';
+import messages from '@/assets/messages';
 
 export default {
   async [info.LOAD_INFO]({ commit }) {
@@ -14,17 +17,18 @@ export default {
       commit(info.SET_INFO, data);
     });
   },
-  async [info.UPDATE_INFO]({ commit, getters }, toUpdate) {
+  async [info.UPDATE_INFO]({ dispatch, commit, getters }, toUpdate) {
     const userId = getAuth().currentUser.uid;
     const db = getDatabase();
-    const updateData = { ...getters.getInfo, ...toUpdate };
+    const updateData = { ...getters[info.GET_INFO], ...toUpdate };
     const infoRef = ref(db, `/users/${userId}/info`);
     update(infoRef, updateData)
       .then(() => {
         commit(info.SET_INFO, updateData);
+        commit(ADD_NOTIFICATION, messages['data-updated']);
       })
       .catch((e) => {
-        commit('setError', e);
+        dispatch(ADD_ERROR, e);
         throw e;
       });
   },
