@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     clickOnNextCard() {
-      this.cards = this.cards.filter((c) => c.id !== this.currentCard.id);
+      this.cards = this.cards.filter((card) => card.id !== this.currentCard.id);
     },
   },
 };

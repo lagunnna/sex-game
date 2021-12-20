@@ -20,7 +20,7 @@
     <router-link
       :to='"/selectLevel"'
       tag='button'
-      class="active-btn start-btn" id="start"
+      class="active-btn start-btn"
       >
       Начать
     </router-link>
