@@ -11,14 +11,18 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .logo {
   display: flex;
   flex-flow: column;
   padding: 1em;
 }
 
-.small {
+.small-logo {
+  margin: 0 auto;
+  max-width: 8em;
+  cursor: pointer;
+
   .title-neon-blue {
     font-size: 1.5rem;
 
@@ -52,6 +56,7 @@ export default {
   line-height: 0.7;
   animation: neon .4s ease-in-out infinite alternate;
   text-shadow: 0 0 0.8em rgb(255, 51, 0), 0 0 0.8em rgb(255, 51, 0);
+  background-color: transparent;
 }
 
 @keyframes neon {

@@ -1,42 +1,45 @@
 <template>
-  <div class="small">
-    <Logo />
-    <Loader v-if="!levels.length"/>
-    <main v-else>
-      <h1 class="title-levels">Уровень сложности</h1>
-      <div class="btns-levels">
-        <button
+  <Loader v-if="!levels.length"/>
+  <main v-else>
+    <h1 class="title-levels">Уровень сложности</h1>
+    <div class="btns-levels">
+      <button
         v-for="level of levels"
         :key="level.id"
-        class="active-btn active-btn-levels"
         @click="setCurrentLevel(level)"
-        >{{level.title}}</button>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdX8WJ8jmMZNloNDKaDJazrZ12qzvAbL58dvOgeHo6oPVyPow/viewform" target="_blank" rel="noopener noreferrer" class="active-btn-levels active-btn">Оставить отзыв</a>
-      </div>
-    </main>
-  </div>
+        class="active-btn active-btn-levels"
+        >
+        {{level.title}}
+      </button>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdX8WJ8jmMZNloNDKaDJazrZ12qzvAbL58dvOgeHo6oPVyPow/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="active-btn-levels active-btn"
+        >
+        Оставить отзыв
+      </a>
+    </div>
+  </main>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import Logo from '../components/Logo.vue';
+import { FETCH_LEVELS, GET_LEVELS, SET_CURRENT_LEVEL } from '../store/modules/level/constants';
 
 export default {
   name: 'selectLevel',
   computed: {
-    ...mapGetters(['levels']),
+    ...mapGetters({ levels: GET_LEVELS }),
   },
   mounted() {
-    this.$store.dispatch('fetchLevels');
+    this.$store.dispatch(FETCH_LEVELS);
   },
   methods: {
     setCurrentLevel(level) {
-      this.$store.commit('setCurrentLevel', level.id);
+      this.$store.commit(SET_CURRENT_LEVEL, level.id);
       this.$router.push(`/cards/${level.path}`);
     },
-  },
-  components: {
-    Logo,
   },
 };
 </script>

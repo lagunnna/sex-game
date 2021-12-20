@@ -1,11 +1,37 @@
 <template>
   <div id="app">
-    <router-view/>
+    <keep-alive  v-if="layout">
+      <component :is="layout">
+        <router-view/>
+      </component>
+    </keep-alive>
+    <router-view v-else />
+    <NotificationList />
   </div>
 </template>
 
+<script>
+import MainLayout from '@/layouts/MainLayout.vue';
+import NotificationList from '@/components/NotificationList.vue';
+
+export default {
+  computed: {
+    layout() {
+      return this.$route.meta.layout;
+    },
+  },
+  components: {
+    MainLayout, NotificationList,
+  },
+};
+</script>
+
 <style lang="scss">
 @import url('./assets/styles/index.scss');
+
+*{
+  background-color: #000;
+}
 
 #app {
   font-family: "Ethna";

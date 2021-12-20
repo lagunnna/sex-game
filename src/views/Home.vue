@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Dropdown />
     <Logo />
     <div class="hello-text-block">
       <span class="hello-text">
@@ -17,20 +18,23 @@
       </span>
     </div>
     <router-link
-      tag='button'
       :to='"/selectLevel"'
-      class="active-btn start-btn" id="start">
-      Начать</router-link>
+      tag='button'
+      class="active-btn start-btn"
+      >
+      Начать
+    </router-link>
   </div>
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue';
+import Logo from '../components/Logo.vue';
+import Dropdown from '../components/Dropdown.vue';
 
 export default {
   name: 'Home',
   components: {
-    Logo,
+    Logo, Dropdown,
   },
 };
 </script>
