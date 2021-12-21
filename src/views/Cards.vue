@@ -1,10 +1,13 @@
 <template>
-  <div v-if="currentCard" class="content">
+  <div
+    v-if="currentCard"
+    class="content"
+  >
     <router-link
       :to="'/selectLevel'"
       tag="button"
       class="active-btn active-btn-cards"
-      >
+    >
       Выбрать уровень
     </router-link>
     <img
@@ -13,20 +16,23 @@
       class="card-img"
     >
     <button
-      @click.prevent="clickOnNextCard"
       class="active-btn active-btn-cards"
-      >
+      @click.prevent="clickOnNextCard"
+    >
       Следующая карточка
     </button>
   </div>
-  <div v-else class="no-content">
+  <div
+    v-else
+    class="no-content"
+  >
     <h5>Карточки кончились :(</h5>
     <h5>Самое время сменить уровень</h5>
     <router-link
       :to="'/selectLevel'"
       tag="button"
       class="active-btn active-btn-cards"
-      >
+    >
       Выбрать уровень
     </router-link>
   </div>
@@ -36,7 +42,7 @@
 import { GET_CARDS_BY_CURRENT_LEVEL } from '../store/modules/level/constants';
 
 export default {
-  name: 'cards',
+  name: 'Cards',
   data: () => ({
     cards: [],
     publicPath: process.env.BASE_URL,

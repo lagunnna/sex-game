@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <keep-alive  v-if="layout">
+    <keep-alive v-if="layout">
       <component :is="layout">
-        <router-view/>
+        <router-view />
       </component>
     </keep-alive>
     <router-view v-else />
@@ -15,13 +15,13 @@ import MainLayout from '@/layouts/MainLayout.vue';
 import NotificationList from '@/components/NotificationList.vue';
 
 export default {
+  components: {
+    MainLayout, NotificationList,
+  },
   computed: {
     layout() {
       return this.$route.meta.layout;
     },
-  },
-  components: {
-    MainLayout, NotificationList,
   },
 };
 </script>

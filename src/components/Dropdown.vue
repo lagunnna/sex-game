@@ -1,20 +1,38 @@
 <template>
   <div class="pos-absolute">
-    <button @click.prevent="toggleMenu" class="btn-toggle btn">
-      <b-icon icon="person">Профиль</b-icon>
+    <button
+      class="btn-toggle btn"
+      @click.prevent="toggleMenu"
+    >
+      <b-icon icon="person">
+        Профиль
+      </b-icon>
     </button>
-    <menu v-show="isOpen" class="menu">
-      <button @click.prevent="logout" class="btn btn-logout">
-        <b-icon icon="box-arrow-right">Выйти</b-icon>
+    <menu
+      v-show="isOpen"
+      class="menu"
+    >
+      <button
+        class="btn btn-logout"
+        @click.prevent="logout"
+      >
+        <b-icon icon="box-arrow-right">
+          Выйти
+        </b-icon>
       </button>
       <router-link
         to="/profile"
         tag="button"
         class="btn btn-profile"
-        >
-        <b-icon icon="person">Профиль</b-icon>
+      >
+        <b-icon icon="person">
+          Профиль
+        </b-icon>
       </router-link>
-      <button @click.prevent="toggleMenu" class="btn btn-cancel">
+      <button
+        class="btn btn-cancel"
+        @click.prevent="toggleMenu"
+      >
         <span>&#10005;</span>
       </button>
     </menu>
@@ -25,7 +43,7 @@
 import { LOGOUT } from '../store/modules/auth/constants';
 
 export default {
-  name: 'dropdown',
+  name: 'Dropdown',
   data: () => ({
     isOpen: false,
   }),

@@ -1,56 +1,69 @@
 <template>
-  <b-form @submit.prevent="onSubmit" class="profile-form">
-    <h5 class="profile-title">Профиль</h5>
+  <b-form
+    class="profile-form"
+    @submit.prevent="onSubmit"
+  >
+    <h5 class="profile-title">
+      Профиль
+    </h5>
     <div class="profile-content mb-4">
       <b-form-group
         label="имя"
         label-for="name"
-        >
+      >
         <b-form-input
-          type="text"
           id="name"
           v-model.trim="name"
+          type="text"
           :state="!$v.name.$error"
-          class="input-no-border">
-        </b-form-input>
+          class="input-no-border"
+        />
         <b-form-invalid-feedback
           :state="!$v.name.$error"
-          >
+        >
           введите имя
         </b-form-invalid-feedback>
       </b-form-group>
       <b-form-group
         label="e-mail"
         label-for="email"
-        >
+      >
         <b-form-input
-          type="email"
           id="email"
-          disabled
           v-model.trim="email"
-          class="input-no-border">
-        </b-form-input>
+          type="email"
+          disabled
+          class="input-no-border"
+        />
       </b-form-group>
       <div class="form-switch mt-3 ps-0">
         <label
-          for="isMan">
+          for="isMan"
+        >
           жен
           <input
-            type="checkbox"
             id="isMan"
-            role="switch"
             v-model="isMan"
-            class="form-check-input">
+            type="checkbox"
+            role="switch"
+            class="form-check-input"
+          >
           муж
-          </label>
+        </label>
       </div>
     </div>
     <div class="profile-actions">
-      <button type="submit" class="active-btn">
+      <button
+        type="submit"
+        class="active-btn"
+      >
         Сохранить
-          <b-icon icon="cloud-check" font-scale="1">
-            save
-          </b-icon>
+        <b-icon
+          icon="cloud-check"
+          font-scale="1"
+        >
+          save
+        </b-icon>
       </button>
     </div>
   </b-form>
@@ -62,7 +75,7 @@ import { mapGetters, mapActions, mapMutations } from 'vuex';
 import * as info from '../store/modules/info/constants';
 
 export default {
-  name: 'profile',
+  name: 'Profile',
   validations: {
     name: { required },
   },

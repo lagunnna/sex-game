@@ -18,10 +18,10 @@
       </span>
     </div>
     <router-link
-      :to='"/selectLevel"'
-      tag='button'
+      to="/selectLevel"
+      tag="button"
       class="active-btn start-btn"
-      >
+    >
       Начать
     </router-link>
   </div>

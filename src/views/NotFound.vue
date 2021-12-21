@@ -1,8 +1,14 @@
 <template>
   <div class="not-found">
     <div class="not-found-text-block">
-      <p class="not-found-text">Такой страницы не существует.</p>
-      <p class="not-found-text">Перейти <router-link to="/">на главную</router-link>.</p>
+      <p class="not-found-text">
+        Такой страницы не существует.
+      </p>
+      <p class="not-found-text">
+        Перейти <router-link to="/">
+          на главную
+        </router-link>.
+      </p>
     </div>
     <span class="not-found-img">404</span>
   </div>
@@ -10,7 +16,7 @@
 
 <script>
 export default {
-  name: 'notFound',
+  name: 'NotFound',
   data: () => ({
     timeout: null,
   }),
