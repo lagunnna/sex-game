@@ -1,46 +1,53 @@
 <template>
-  <form @submit.prevent='onSubmit' class="auth-form">
-    <h5 class="register-title">Зарегистрироваться</h5>
+  <form
+    class="auth-form"
+    @submit.prevent="onSubmit"
+  >
+    <h5 class="register-title">
+      Зарегистрироваться
+    </h5>
     <div class="register-content mb-4">
       <b-form-group
         label="имя"
         label-for="name"
-        >
+      >
         <b-form-input
-          type="text"
           id="name"
           v-model.trim="$v.name.$model"
+          type="text"
           :state="!$v.name.$error"
-          placeholder="введите имя">
-        </b-form-input>
+          placeholder="введите имя"
+        />
         <b-form-invalid-feedback :state="!$v.name.$error">
           введите имя
         </b-form-invalid-feedback>
       </b-form-group>
       <div class="form-switch mt-2 ps-0">
         <label
-          for="isMan">
+          for="isMan"
+        >
           жен
           <input
-            type="checkbox"
             id="isMan"
-            role="switch"
             v-model="isMan"
-            class="form-check-input">
+            type="checkbox"
+            role="switch"
+            class="form-check-input"
+          >
           муж
-          </label>
+        </label>
       </div>
       <b-form-group
         label="e-mail"
         label-for="email"
-        >
+      >
         <b-form-input
-          type="email"
           id="email"
           v-model.trim="$v.email.$model"
+          type="email"
           :state="!$v.email.$error"
-          placeholder="введите e-mail">
-        </b-form-input>
+          placeholder="введите e-mail"
+        />
         <b-form-invalid-feedback :state="!$v.email.$error">
           введите корректный email
         </b-form-invalid-feedback>
@@ -48,39 +55,51 @@
       <b-form-group
         label="пароль"
         label-for="password"
-        >
+      >
         <b-form-input
-          type="password"
           id="password"
           v-model.trim="$v.password.$model"
+          type="password"
           :state="!$v.password.$error"
-          placeholder="придумайте пароль">
-        </b-form-input>
+          placeholder="придумайте пароль"
+        />
         <b-form-invalid-feedback :state="!$v.password.$error">
-          пароль должен быть не менее {{$v.password.$params.minLength.min}} символов
+          пароль должен быть не менее {{ $v.password.$params.minLength.min }} символов
         </b-form-invalid-feedback>
       </b-form-group>
       <div class="checkbox mt-3">
         <input
-          type="checkbox"
           id="isAdult"
           v-model="isAdult"
-          class="form-check-input">
-        <label for="isAdult" class="mx-2">
+          type="checkbox"
+          class="form-check-input"
+        >
+        <label
+          for="isAdult"
+          class="mx-2"
+        >
           мне есть 18 лет
         </label>
       </div>
     </div>
     <div class="register-actions">
-      <button type="submit" class="active-btn">
+      <button
+        type="submit"
+        class="active-btn"
+      >
         Зарегистрироваться
-        <b-icon icon="box-arrow-right" font-scale="1">
+        <b-icon
+          icon="box-arrow-right"
+          font-scale="1"
+        >
           send
         </b-icon>
       </button>
       <p class="mt-1">
         Уже есть аккаунт?
-        <router-link to="/login">Войти</router-link>
+        <router-link to="/login">
+          Войти
+        </router-link>
       </p>
     </div>
   </form>
@@ -91,7 +110,7 @@ import { email, required, minLength } from 'vuelidate/lib/validators';
 import { REGISTER } from '../store/modules/auth/constants';
 
 export default {
-  name: 'register',
+  name: 'Register',
   data: () => ({
     name: '',
     email: '',

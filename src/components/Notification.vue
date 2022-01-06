@@ -3,17 +3,18 @@
     class="toast text-white show"
     role="alert"
     aria-live="assertive"
-    aria-atomic="true">
+    aria-atomic="true"
+  >
     <div class="d-flex">
       <div class="toast-body">
-        {{notification.message}}
+        {{ notification.message }}
       </div>
       <button
-        @click.prevent="removeNotification"
-        class="btn-close btn-close-white me-2 m-auto"
+        aria-label="Close"
         data-bs-dismiss="toast"
-        aria-label="Close">
-      </button>
+        class="btn-close btn-close-white me-2 m-auto"
+        @click.prevent="removeNotification"
+      />
     </div>
   </div>
 </template>
@@ -22,7 +23,7 @@
 import { REMOVE_NOTIFICATION } from '../store/modules/notification/constants';
 
 export default {
-  name: 'notification',
+  name: 'Notification',
   props: {
     notification: {
       type: Object,

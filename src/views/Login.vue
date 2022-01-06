@@ -1,46 +1,57 @@
 <template>
-  <form @submit.prevent='onSubmit' class="auth-form">
-    <h5 class="login-title">Войти</h5>
+  <form
+    class="auth-form"
+    @submit.prevent="onSubmit"
+  >
+    <h5 class="login-title">
+      Войти
+    </h5>
     <div class="login-content mb-4">
       <b-form-group
         label="e-mail"
         label-for="email"
-        >
+      >
         <b-form-input
-          type="email"
           id="email"
           v-model.trim="$v.email.$model"
+          type="email"
           :state="!$v.email.$error"
-          placeholder="введите e-mail">
-        </b-form-input>
+          placeholder="введите e-mail"
+        />
       </b-form-group>
       <b-form-invalid-feedback
         :state="!$v.email.$error"
-        >
+      >
         введите корректный email
       </b-form-invalid-feedback>
       <b-form-group
         label="пароль"
         label-for="password"
-        >
+      >
         <b-form-input
-          type="password"
           id="password"
           v-model.trim="$v.password.$model"
+          type="password"
           :state="!$v.password.$error"
-          placeholder="введите пароль">
-        </b-form-input>
+          placeholder="введите пароль"
+        />
       </b-form-group>
       <b-form-invalid-feedback
         :state="!$v.password.$error"
-        >
-        пароль должен быть не менее {{$v.password.$params.minLength.min}} символов
+      >
+        пароль должен быть не менее {{ $v.password.$params.minLength.min }} символов
       </b-form-invalid-feedback>
     </div>
     <div class="login-actions">
-      <button type="submit"  class="active-btn">
+      <button
+        type="submit"
+        class="active-btn"
+      >
         Войти
-        <b-icon icon="box-arrow-in-right" font-scale="1">
+        <b-icon
+          icon="box-arrow-in-right"
+          font-scale="1"
+        >
           send
         </b-icon>
       </button>
@@ -59,7 +70,7 @@ import { email, required, minLength } from 'vuelidate/lib/validators';
 import { LOGIN } from '../store/modules/auth/constants';
 
 export default {
-  name: 'login',
+  name: 'Login',
   data: () => ({
     email: '',
     password: '',

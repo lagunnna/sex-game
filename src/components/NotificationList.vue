@@ -13,7 +13,7 @@ import { GET_NOTIFICATIONS } from '../store/modules/notification/constants';
 import Notification from './Notification.vue';
 
 export default {
-  name: 'notificationList',
+  name: 'NotificationList',
   components: {
     Notification,
   },
