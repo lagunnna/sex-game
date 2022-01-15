@@ -45,11 +45,10 @@ export default {
   name: 'Cards',
   data: () => ({
     cards: [],
-    publicPath: process.env.BASE_URL,
   }),
   computed: {
     imgSrc() {
-      return this.publicPath + this.currentCard?.imgSrc;
+      return this.currentCard?.imgSrc;
     },
     currentCard() {
       return this.cards[Math.floor(Math.random() * this.cards.length)];
