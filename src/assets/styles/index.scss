@@ -1,0 +1,70 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.6em);
+
+  @media (min-width: 50em) {
+    font-size: 1.125em;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Varela Round";
+  src: url("../fonts/VarelaRound-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Ethna";
+  src: url("../fonts/ofont.ru_Ethna.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Draft Beer";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/lasenter.woff")
+  format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plexi";
+  src: url("../fonts/plexifont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+a:link {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button:hover {
+  text-shadow: 0 0 3em #00b4de, 0 0 3em #00b4de;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.active-btn {
+  border: thick double #32a1ce;
+  color: inherit;
+  background-color: black;
+  border-radius: 10px;
+  padding: 0.5em 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
