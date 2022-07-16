@@ -27,12 +27,12 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { FETCH_LEVELS, GET_LEVELS, SET_CURRENT_LEVEL } from '../store/modules/level/constants';
+import { FETCH_LEVELS, GET_SORTED_LEVELS, SET_CURRENT_LEVEL } from '../store/modules/level/constants';
 
 export default {
   name: 'SelectLevel',
   computed: {
-    ...mapGetters({ levels: GET_LEVELS }),
+    ...mapGetters({ levels: GET_SORTED_LEVELS }),
   },
   mounted() {
     this.$store.dispatch(FETCH_LEVELS);
